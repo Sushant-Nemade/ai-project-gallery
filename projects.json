@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "source_gallery": "https://github.com/KalyanM45/AI-Project-Gallery",
+  "eligibility_reviewed_on": "2026-10-06",
+  "categories": {
+    "generative-agentic-ai": "Generative and Agentic AI",
+    "data-developer-tools": "Data and Developer Tools",
+    "predictive-machine-learning": "Predictive Machine Learning",
+    "computer-vision": "Computer Vision",
+    "recommendation-systems": "Recommendation Systems"
+  },
+  "projects": [
+    {
+      "id": "ai-blog-publisher", "name": "AI Blog Publisher (BlogBoard)",
+      "category": "generative-agentic-ai", "portfolio_category": "Responsible automation",
+      "tags": ["LangGraph", "Python", "content-publishing", "human-review"],
+      "source": "https://github.com/KalyanM45/Multi-Agentic-Blog-Generation",
+      "source_commit": "8b743e21ac0e940dc8bd159f5d94a8f5eb17c630", "license": "MIT",
+      "repository": "https://github.com/Sushant-Nemade/ai-blog-publisher",
+      "status": "reference", "verification": "Offline workflow and browser tests passed; live AI/search/R2 integrations unverified.",
+      "demo": null
+    },
+    {"id": "gitpulse", "name": "GitHub Tracker (GitPulse)", "category": "data-developer-tools", "source": "https://github.com/KalyanM45/GitPulse", "status": "planned"},
+    {"id": "doclify", "name": "Doclify", "category": "data-developer-tools", "source": "https://github.com/KalyanM45/Doclify", "status": "planned"},
+    {"id": "market-insight", "name": "Market Insight", "category": "generative-agentic-ai", "source": "https://github.com/KalyanM45/MarketInsight", "status": "planned"},
+    {"id": "travelbrain", "name": "Travel Planning Agent (TravelBrain)", "category": "generative-agentic-ai", "source": "https://github.com/KalyanM45/TravelBrain-Multi-Agent-AI-Travel-Planner", "status": "planned"},
+    {"id": "airbnb-prices", "name": "Airbnb Price Prediction", "category": "predictive-machine-learning", "source": "https://github.com/KalyanMurapaka45/End-to-End-Airbnb-Price-Prediction", "status": "planned"},
+    {"id": "boston-housing", "name": "Boston House Price Prediction", "category": "predictive-machine-learning", "source": "https://github.com/KalyanMurapaka45/House-Price-Prediction", "status": "planned"},
+    {"id": "diamond-prices", "name": "Diamond Price Prediction", "category": "predictive-machine-learning", "source": "https://github.com/KalyanM45/Diamond-Price-Prediction", "status": "planned"},
+    {"id": "flight-fares", "name": "Flight Fare Prediction", "category": "predictive-machine-learning", "source": "https://github.com/KalyanMurapaka45/Flight-Fare-Prediction", "status": "planned"},
+    {"id": "heart-disease", "name": "Heart Disease Prediction", "category": "predictive-machine-learning", "source": "https://github.com/KalyanMurapaka45/Heart-Disease-Prediction", "status": "planned"},
+    {"id": "email-spam", "name": "Spam E-Mail Detection", "category": "predictive-machine-learning", "source": "https://github.com/KalyanMurapaka45/Spam-Email-Detection", "status": "planned"},
+    {"id": "student-performance", "name": "Student Performance Prediction", "category": "predictive-machine-learning", "source": "https://github.com/KalyanMurapaka45/Student-Perfomance-Prediction", "status": "planned"},
+    {"id": "respire", "name": "Respire: Chest Disease Detection", "category": "computer-vision", "source": "https://github.com/KalyanM45/End-to-End-Chest-Disease-Classification", "status": "planned"},
+    {"id": "movie-recommendations", "name": "Movie Recommendation System", "category": "recommendation-systems", "source": "https://github.com/KalyanMurapaka45/End-to-End-Movie-Recommendation-System", "status": "planned"}
+  ]
+}
