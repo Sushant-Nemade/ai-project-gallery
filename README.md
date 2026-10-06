@@ -20,7 +20,8 @@ Verification: Offline workflow, Linux/Windows CI and hosted browser checks passe
 
 Primary category: **Data and Developer Tools**. Portfolio placement: **Trustworthy data and developer tools**.
 Concept reference: [https://github.com/KalyanM45/GitPulse](https://github.com/KalyanM45/GitPulse); source license: unverified MIT claim. No upstream code imported; original implementation license: MIT; specification revision: `8af259174045fce5c081b36e36b407df82834823`.
-Verification: Original code; strict typing, security audits, desktop/mobile tests, Linux/Windows CI and one public GitHub REST sync verified. Hosted private API remains unverified.
+Verification: Original code; strict typing, security audits, desktop/mobile tests, Linux/Windows CI, hosted fictional demo and one public GitHub REST sync verified. Hosted private API remains unverified.
+[Synthetic reference demo](https://sushant-nemade.github.io/gitpulse/)
 
 ## Categorized Backlog
 

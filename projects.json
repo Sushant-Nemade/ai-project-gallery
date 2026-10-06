@@ -27,8 +27,8 @@
       "source_commit": "8af259174045fce5c081b36e36b407df82834823",
       "implementation": "original", "upstream_code_imported": false, "source_license": "unverified MIT claim",
       "license": "MIT", "repository": "https://github.com/Sushant-Nemade/gitpulse", "status": "reference",
-      "verification": "Original code; strict typing, security audits, desktop/mobile tests, Linux/Windows CI and one public GitHub REST sync verified. Hosted private API remains unverified.",
-      "demo": null
+      "verification": "Original code; strict typing, security audits, desktop/mobile tests, Linux/Windows CI, hosted fictional demo and one public GitHub REST sync verified. Hosted private API remains unverified.",
+      "demo": "https://sushant-nemade.github.io/gitpulse/"
     },
     {"id": "doclify", "name": "Doclify", "category": "data-developer-tools", "source": "https://github.com/KalyanM45/Doclify", "status": "planned"},
     {"id": "market-insight", "name": "Market Insight", "category": "generative-agentic-ai", "source": "https://github.com/KalyanM45/MarketInsight", "status": "planned"},
