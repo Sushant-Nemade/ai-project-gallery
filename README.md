@@ -16,6 +16,12 @@ Source: [https://github.com/KalyanM45/Multi-Agentic-Blog-Generation](https://git
 Verification: Offline workflow, Linux/Windows CI and hosted browser checks passed; live AI/search/R2 integrations unverified.
 [Synthetic reference demo](https://sushant-nemade.github.io/ai-blog-publisher/)
 
+### [GitPulse: Audience Workspace](https://github.com/Sushant-Nemade/gitpulse)
+
+Primary category: **Data and Developer Tools**. Portfolio placement: **Trustworthy data and developer tools**.
+Concept reference: [https://github.com/KalyanM45/GitPulse](https://github.com/KalyanM45/GitPulse); source license: unverified MIT claim. No upstream code imported; original implementation license: MIT; specification revision: `8af259174045fce5c081b36e36b407df82834823`.
+Verification: Original code; strict typing, security audits, desktop/mobile tests, Linux/Windows CI and one public GitHub REST sync verified. Hosted private API remains unverified.
+
 ## Categorized Backlog
 
 ### Generative and Agentic AI
@@ -26,7 +32,7 @@ Verification: Offline workflow, Linux/Windows CI and hosted browser checks passe
 
 ### Data and Developer Tools
 
-- [GitHub Tracker (GitPulse)](https://github.com/KalyanM45/GitPulse) - planned
+- [GitPulse: Audience Workspace](https://github.com/Sushant-Nemade/gitpulse) - reference
 - [Doclify](https://github.com/KalyanM45/Doclify) - planned
 
 ### Predictive Machine Learning
@@ -49,7 +55,7 @@ Verification: Offline workflow, Linux/Windows CI and hosted browser checks passe
 
 ## Delivery Policy
 
-Next recommended candidate: GitPulse, then Doclify, subject to fresh license and runnable-path audits.
+Active implementation: none. Next pending candidate: Doclify, subject to fresh license and runnable-path audits.
 No automatic daily imports or unattended publishing. Return in a later session to request the next project.
 Healthcare and financial examples remain educational until separately validated for any proposed real use.
 

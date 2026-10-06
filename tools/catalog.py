@@ -37,6 +37,9 @@ def validate(document):
         if not github_url(project["source"], {"KalyanM45", "KalyanMurapaka45"}):
             raise ValueError("project source must come from the gallery author")
         active += project["status"] == "in_progress"
+        if project.get("implementation") == "original" and (
+                project.get("upstream_code_imported") is not False or not project.get("source_license")):
+            raise ValueError("original implementation requires explicit no-import and source-license disclosure")
         if project["status"] == "reference":
             if (not project.get("license") or not re.fullmatch(r"[a-f0-9]{40}", project.get("source_commit", ""))
                     or not github_url(project.get("repository", ""), {"Sushant-Nemade"})
@@ -59,9 +62,13 @@ def render(document):
     for project in document["projects"]:
         if project["status"] != "reference":
             continue
+        source_notice = (f"Concept reference: [{project['source']}]({project['source']}); source license: {project['source_license']}. "
+                 f"No upstream code imported; original implementation license: {project['license']}; specification revision: `{project['source_commit']}`."
+                 if project.get("implementation") == "original" else
+                 f"Source: [{project['source']}]({project['source']}); license: {project['license']}; upstream revision: `{project['source_commit']}`.")
         lines += [f"### [{project['name']}]({project['repository']})", "",
                   f"Primary category: **{document['categories'][project['category']]}**. Portfolio placement: **{project['portfolio_category']}**.",
-                  f"Source: [{project['source']}]({project['source']}); license: {project['license']}; upstream revision: `{project['source_commit']}`.",
+              source_notice,
                   f"Verification: {project['verification']}"]
         if project.get("demo"):
             lines.append(f"[Synthetic reference demo]({project['demo']})")
@@ -73,7 +80,9 @@ def render(document):
             if project["category"] == category:
                 lines.append(f"- [{project['name']}]({project.get('repository', project['source'])}) - {project['status']}")
         lines.append("")
-    lines += ["## Delivery Policy", "", "Next recommended candidate: GitPulse, then Doclify, subject to fresh license and runnable-path audits.",
+    active_name = next((project["name"] for project in document["projects"] if project["status"] == "in_progress"), None)
+    pending_name = next((project["name"] for project in document["projects"] if project["status"] == "planned"), "None")
+    lines += ["## Delivery Policy", "", f"Active implementation: {active_name or 'none'}. Next pending candidate: {pending_name}, subject to fresh license and runnable-path audits.",
               "No automatic daily imports or unattended publishing. Return in a later session to request the next project.",
               "Healthcare and financial examples remain educational until separately validated for any proposed real use.", "",
               "[Release checklist](docs/RELEASE_CHECKLIST.md) | [Portfolio](https://sushant-nemade.github.io/)", "",
@@ -95,7 +104,8 @@ def main():
             raise ValueError("README does not match projects.json; regenerate the catalog")
     else:
         readme.write_text(expected, encoding="utf-8", newline="\n")
-    print(f"Catalog verified: {len(document['projects'])} candidates, one reference implementation")
+    references = sum(project["status"] == "reference" for project in document["projects"])
+    print(f"Catalog verified: {len(document['projects'])} candidates, {references} reference implementation(s)")
 
 
 if __name__ == "__main__":
