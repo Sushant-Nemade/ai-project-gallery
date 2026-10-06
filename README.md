@@ -13,7 +13,8 @@ Planned entries are links only: their code, data, model licenses and runtime sti
 
 Primary category: **Generative and Agentic AI**. Portfolio placement: **Responsible automation**.
 Source: [https://github.com/KalyanM45/Multi-Agentic-Blog-Generation](https://github.com/KalyanM45/Multi-Agentic-Blog-Generation); license: MIT; upstream revision: `8b743e21ac0e940dc8bd159f5d94a8f5eb17c630`.
-Verification: Offline workflow and browser tests passed; live AI/search/R2 integrations unverified.
+Verification: Offline workflow, Linux/Windows CI and hosted browser checks passed; live AI/search/R2 integrations unverified.
+[Synthetic reference demo](https://sushant-nemade.github.io/ai-blog-publisher/)
 
 ## Categorized Backlog
 
