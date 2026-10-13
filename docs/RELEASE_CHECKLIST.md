@@ -13,3 +13,92 @@
 11. Record remaining provider, deployment and domain-validation limitations before considering the next candidate.
 
 Future projects start only on a later explicit request, not on a timer. No credentials belong in code, chat, fixtures or the catalog.
+
+## Public Access Review: 2026-10-14
+
+All three released reference implementations pass their current Python suites
+and local dependency audits. Their latest published CI runs are successful.
+This does not establish live-provider availability or production hosting.
+
+| Project | Usable today | Remaining live-use boundary |
+| --- | --- | --- |
+| [AI Blog Publisher](https://sushant-nemade.github.io/ai-blog-publisher/) | Public article reader; one labeled synthetic reference article. Local draft/review/publication workflow. | Live Groq and optional news/search/R2 integrations need configured smoke tests. No public article-generation API or multi-user editor. |
+| [GitPulse](https://sushant-nemade.github.io/gitpulse/) | Public sample dashboard; authenticated local API and CLI; a real public REST sync was previously verified. | Public dashboard is not a hosted private API. Private hosting needs HTTPS, persistent storage, access controls and verified backup/restore. |
+| [Doclify](https://github.com/Sushant-Nemade/Doclify) | Installable local CLI; offline structural documentation and reviewed publication. | Live Groq inference needs a user-configured key and explicit source-upload consent. A website is optional, not required for a CLI. |
+
+Reference verification remains separate from live integration and managed service
+readiness. Offline/sample modes must never be presented as real model inference,
+account-specific live data, or an operational SLA.
+
+## AI Blog Publisher: Real Content Delivery
+
+1. Clone the derivative and install its frozen Python and frontend dependencies.
+2. Configure the required Groq key locally, never in browser code or Git. Add
+	Tavily/Guardian only if news research is needed; local storage does not need R2.
+3. Generate one article using the documented CLI with a non-sensitive topic.
+4. Inspect the private draft, verify factual claims and sources, and approve its
+	complete content digest. Publication must preserve any previous article index.
+5. Run site-integrity checks and commit only the reviewed public article/index.
+6. Let successful CI deploy the static Pages artifact; verify the deployed article
+	on desktop and mobile and record the real-provider smoke evidence.
+
+Readers need no AI key or backend. If visitors should generate articles, that is
+a separate service: add authenticated accounts, queueing, per-user quotas, model
+budget limits and server-side secrets before hosting. Do not expose the owner CLI
+or a shared provider key as an anonymous public endpoint.
+
+## GitPulse: Private Live Dashboard
+
+1. Follow the repository's local setup and build its frontend before serving the API.
+2. Set GITHUB_USERNAME, a strong local API_TOKEN, and a persistent DATABASE_PATH.
+	Keep any optional GitHub token server-side. Start the documented loopback API.
+3. Run one actual sync, check the resulting snapshot/history, and verify that
+	unauthenticated API calls fail and the previous snapshot survives sync failures.
+4. Select an explicitly approved host with HTTPS and a durable data volume. Free
+	ephemeral hosting is unsuitable for retaining audience history without backups.
+5. Restrict CORS to the intended dashboard origin and keep access private. A static
+	Pages frontend can connect to the approved HTTPS API after explicit authentication.
+6. Test backup/restore, restart persistence, rate limits, redacted logs and health
+	checks before enabling any scheduled collection.
+
+The current API_TOKEN authorizes one account workspace. Do not hand its owner token
+to public visitors. A multi-user product needs user identity/OAuth, per-user data
+isolation and permission checks first. Never publish the local database as sample data.
+
+## Doclify: Developer Distribution
+
+1. Download the derivative source or its doclify-portfolio wheel, not the upstream
+	PyPI package. The public [reference release](https://github.com/Sushant-Nemade/Doclify/releases/tag/v0.3.0-reference)
+	contains verified CI artifacts and checksums. Verify Python compatibility and
+	the included AGPL notices.
+2. Install the derivative in a dedicated environment and run doclify --help and
+	doclify --license. Start with a synthetic or approved project directory.
+3. Run init, inspect doclify.yaml, then run --dry-run and --offline. Inspect the
+	private Markdown artifact before publish --approve FULL_DIGEST.
+4. For real AI generation, configure GROQ_API_KEY locally and use --allow-upload
+	only after reviewing selected files and the provider's terms/data handling.
+5. Record a real generation/review/publication smoke test separately from offline
+	reference tests. Never upload third-party/private company code without permission.
+
+A hosted upload-and-generate website would need consent, isolated non-executing
+workers, archive/path controls, authentication, quotas, deletion/retention policy,
+and a prominent corresponding-source offer under the AGPL. Do not add such hosting
+merely to make a CLI portfolio entry look live.
+
+## Next Candidate: Market Insight
+
+The next eligible gallery project is Market Insight, with an upstream GPLv3
+license. Initial inspection shows a FastAPI/React application using Yahoo Finance,
+eager agent/tracing initialization, permissive CORS, and a streaming chat endpoint.
+Although its README describes OpenAI, its actual model client targets the
+third-party Thesys gateway. A normal OpenAI key must not be sent to that gateway.
+Its claimed production readiness is not verified.
+
+Before importing or exposing it: pin the source, reproduce startup, separate
+health checks from credential-dependent clients, bound requests/tool calls,
+disable tracing by default, protect conversation isolation and authenticate any
+shared provider-backed API. Preserve financial-data provenance and distinguish
+educational analysis from advice, forecasting guarantees or executable trades.
+The next implementation must explicitly select and document a provider origin,
+its credentials and data handling. Paid provider use and public API hosting
+require an explicit budget/access decision.

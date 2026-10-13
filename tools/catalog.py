@@ -47,6 +47,8 @@ def validate(document):
                 raise ValueError("published reference requires attribution and verification evidence")
             if project.get("demo") and not project["demo"].startswith("https://sushant-nemade.github.io/"):
                 raise ValueError("demo must belong to the destination portfolio")
+            if project.get("release") and not project["release"].startswith(project["repository"] + "/releases/tag/"):
+                raise ValueError("download release must belong to the project repository")
     if active > 1:
         raise ValueError("only one project may be in progress")
     return document
@@ -72,6 +74,8 @@ def render(document):
                   f"Verification: {project['verification']}"]
         if project.get("demo"):
             lines.append(f"[Synthetic reference demo]({project['demo']})")
+        if project.get("release"):
+            lines.append(f"[Download the reference CLI and source]({project['release']})")
         lines.append("")
     lines += ["## Categorized Backlog", ""]
     for category, label in document["categories"].items():

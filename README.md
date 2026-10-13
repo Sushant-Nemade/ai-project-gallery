@@ -28,13 +28,14 @@ Verification: Original code; strict typing, security audits, desktop/mobile test
 Primary category: **Data and Developer Tools**. Portfolio placement: **Trustworthy data and developer tools**.
 Source: [https://github.com/KalyanM45/Doclify](https://github.com/KalyanM45/Doclify); license: AGPL-3.0-only; upstream revision: `93dfd6632929e0b1dc4b10b1ff0f2115aa890d01`.
 Verification: Attributed AGPLv3 derivative; offline CLI, safe caching, reviewed publication, installed wheel/source checks, Linux 3.10/3.13 and Windows 3.13 CI and dependency audits passed. SDK tests use mocked responses; live Groq inference unverified.
+[Download the reference CLI and source](https://github.com/Sushant-Nemade/Doclify/releases/tag/v0.3.0-reference)
 
 ## Categorized Backlog
 
 ### Generative and Agentic AI
 
 - [AI Blog Publisher (BlogBoard)](https://github.com/Sushant-Nemade/ai-blog-publisher) - reference
-- [Market Insight](https://github.com/KalyanM45/MarketInsight) - planned
+- [Market Insight](https://github.com/KalyanM45/MarketInsight) - in_progress
 - [Travel Planning Agent (TravelBrain)](https://github.com/KalyanM45/TravelBrain-Multi-Agent-AI-Travel-Planner) - planned
 
 ### Data and Developer Tools
@@ -62,7 +63,7 @@ Verification: Attributed AGPLv3 derivative; offline CLI, safe caching, reviewed 
 
 ## Delivery Policy
 
-Active implementation: none. Next pending candidate: Market Insight, subject to fresh license and runnable-path audits.
+Active implementation: Market Insight. Next pending candidate: Travel Planning Agent (TravelBrain), subject to fresh license and runnable-path audits.
 No automatic daily imports or unattended publishing. Return in a later session to request the next project.
 Healthcare and financial examples remain educational until separately validated for any proposed real use.
 

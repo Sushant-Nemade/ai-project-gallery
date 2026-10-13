@@ -17,6 +17,7 @@ class CatalogTests(unittest.TestCase):
         doclify = next(project for project in self.document["projects"] if project["id"] == "doclify")
         self.assertEqual(doclify["license"], "AGPL-3.0-only")
         self.assertIn("live Groq inference unverified", doclify["verification"])
+        self.assertIn("Download the reference CLI and source", render(self.document))
         self.assertIn("live AI/search/R2 integrations unverified", render(self.document))
 
     def test_duplicate_rejected(self):
@@ -43,5 +44,11 @@ class CatalogTests(unittest.TestCase):
     def test_original_requires_no_import_disclosure(self):
         original = next(project for project in self.document["projects"] if project["id"] == "gitpulse")
         original["upstream_code_imported"] = True
+        with self.assertRaises(ValueError):
+            validate(self.document)
+
+    def test_release_from_other_repository_rejected(self):
+        doclify = next(project for project in self.document["projects"] if project["id"] == "doclify")
+        doclify["release"] = "https://github.com/another-owner/project/releases/tag/v1"
         with self.assertRaises(ValueError):
             validate(self.document)
