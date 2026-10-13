@@ -23,6 +23,12 @@ Concept reference: [https://github.com/KalyanM45/GitPulse](https://github.com/Ka
 Verification: Original code; strict typing, security audits, desktop/mobile tests, Linux/Windows CI, hosted fictional demo and one public GitHub REST sync verified. Hosted private API remains unverified.
 [Synthetic reference demo](https://sushant-nemade.github.io/gitpulse/)
 
+### [Doclify](https://github.com/Sushant-Nemade/Doclify)
+
+Primary category: **Data and Developer Tools**. Portfolio placement: **Trustworthy data and developer tools**.
+Source: [https://github.com/KalyanM45/Doclify](https://github.com/KalyanM45/Doclify); license: AGPL-3.0-only; upstream revision: `93dfd6632929e0b1dc4b10b1ff0f2115aa890d01`.
+Verification: Attributed AGPLv3 derivative; offline CLI, safe caching, reviewed publication, installed wheel/source checks, Linux 3.10/3.13 and Windows 3.13 CI and dependency audits passed. SDK tests use mocked responses; live Groq inference unverified.
+
 ## Categorized Backlog
 
 ### Generative and Agentic AI
@@ -34,7 +40,7 @@ Verification: Original code; strict typing, security audits, desktop/mobile test
 ### Data and Developer Tools
 
 - [GitPulse: Audience Workspace](https://github.com/Sushant-Nemade/gitpulse) - reference
-- [Doclify](https://github.com/KalyanM45/Doclify) - planned
+- [Doclify](https://github.com/Sushant-Nemade/Doclify) - reference
 
 ### Predictive Machine Learning
 
@@ -56,7 +62,7 @@ Verification: Original code; strict typing, security audits, desktop/mobile test
 
 ## Delivery Policy
 
-Active implementation: none. Next pending candidate: Doclify, subject to fresh license and runnable-path audits.
+Active implementation: none. Next pending candidate: Market Insight, subject to fresh license and runnable-path audits.
 No automatic daily imports or unattended publishing. Return in a later session to request the next project.
 Healthcare and financial examples remain educational until separately validated for any proposed real use.
 

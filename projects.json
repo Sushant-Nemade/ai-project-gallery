@@ -30,7 +30,16 @@
       "verification": "Original code; strict typing, security audits, desktop/mobile tests, Linux/Windows CI, hosted fictional demo and one public GitHub REST sync verified. Hosted private API remains unverified.",
       "demo": "https://sushant-nemade.github.io/gitpulse/"
     },
-    {"id": "doclify", "name": "Doclify", "category": "data-developer-tools", "source": "https://github.com/KalyanM45/Doclify", "status": "planned"},
+    {
+      "id": "doclify", "name": "Doclify", "category": "data-developer-tools",
+      "portfolio_category": "Trustworthy data and developer tools",
+      "tags": ["Python", "CLI", "documentation", "reviewed-publication"],
+      "source": "https://github.com/KalyanM45/Doclify",
+      "source_commit": "93dfd6632929e0b1dc4b10b1ff0f2115aa890d01",
+      "license": "AGPL-3.0-only", "repository": "https://github.com/Sushant-Nemade/Doclify",
+      "status": "reference",
+      "verification": "Attributed AGPLv3 derivative; offline CLI, safe caching, reviewed publication, installed wheel/source checks, Linux 3.10/3.13 and Windows 3.13 CI and dependency audits passed. SDK tests use mocked responses; live Groq inference unverified."
+    },
     {"id": "market-insight", "name": "Market Insight", "category": "generative-agentic-ai", "source": "https://github.com/KalyanM45/MarketInsight", "status": "planned"},
     {"id": "travelbrain", "name": "Travel Planning Agent (TravelBrain)", "category": "generative-agentic-ai", "source": "https://github.com/KalyanM45/TravelBrain-Multi-Agent-AI-Travel-Planner", "status": "planned"},
     {"id": "airbnb-prices", "name": "Airbnb Price Prediction", "category": "predictive-machine-learning", "source": "https://github.com/KalyanMurapaka45/End-to-End-Airbnb-Price-Prediction", "status": "planned"},

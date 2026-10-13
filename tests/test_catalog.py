@@ -12,7 +12,11 @@ class CatalogTests(unittest.TestCase):
     def test_snapshot_and_primary_categories(self):
         validate(self.document)
         self.assertEqual(len(self.document["projects"]), 14)
-        self.assertEqual(sum(project["status"] == "reference" for project in self.document["projects"]), 2)
+        references = {project["id"] for project in self.document["projects"] if project["status"] == "reference"}
+        self.assertEqual(references, {"ai-blog-publisher", "gitpulse", "doclify"})
+        doclify = next(project for project in self.document["projects"] if project["id"] == "doclify")
+        self.assertEqual(doclify["license"], "AGPL-3.0-only")
+        self.assertIn("live Groq inference unverified", doclify["verification"])
         self.assertIn("live AI/search/R2 integrations unverified", render(self.document))
 
     def test_duplicate_rejected(self):
