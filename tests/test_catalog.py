@@ -19,6 +19,8 @@ class CatalogTests(unittest.TestCase):
         self.assertIn("live Groq inference unverified", doclify["verification"])
         self.assertIn("Download the reference CLI and source", render(self.document))
         self.assertIn("live AI/search/R2 integrations unverified", render(self.document))
+        self.assertTrue((ROOT / "docs/PROJECT_STATUS_AND_PENDING_WORK.md").is_file())
+        self.assertIn("[Project status and pending work](docs/PROJECT_STATUS_AND_PENDING_WORK.md)", render(self.document))
 
     def test_duplicate_rejected(self):
         self.document["projects"].append(copy.deepcopy(self.document["projects"][0]))

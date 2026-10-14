@@ -89,7 +89,7 @@ def render(document):
     lines += ["## Delivery Policy", "", f"Active implementation: {active_name or 'none'}. Next pending candidate: {pending_name}, subject to fresh license and runnable-path audits.",
               "No automatic daily imports or unattended publishing. Return in a later session to request the next project.",
               "Healthcare and financial examples remain educational until separately validated for any proposed real use.", "",
-              "[Release checklist](docs/RELEASE_CHECKLIST.md) | [Portfolio](https://sushant-nemade.github.io/)", "",
+              "[Project status and pending work](docs/PROJECT_STATUS_AND_PENDING_WORK.md) | [Release checklist](docs/RELEASE_CHECKLIST.md) | [Portfolio](https://sushant-nemade.github.io/)", "",
               "## Maintain the Catalog", "", "```text", "python -m tools.catalog", "python -m tools.catalog --check",
               "python -m unittest discover -s tests -v", "```", "",
               "Edit projects.json, then regenerate this README. Preserve source attribution and distinguish local tests from live integration evidence.", ""]
