@@ -30,12 +30,20 @@ Source: [https://github.com/KalyanM45/Doclify](https://github.com/KalyanM45/Docl
 Verification: Attributed AGPLv3 derivative; offline CLI, safe caching, reviewed publication, installed wheel/source checks, Linux 3.10/3.13 and Windows 3.13 CI and dependency audits passed. SDK tests use mocked responses; live Groq inference unverified.
 [Download the reference CLI and source](https://github.com/Sushant-Nemade/Doclify/releases/tag/v0.3.0-reference)
 
+### [Market Insight Research Workbench](https://github.com/Sushant-Nemade/MarketInsight)
+
+Primary category: **Generative and Agentic AI**. Portfolio placement: **Trustworthy data and developer tools**.
+Source: [https://github.com/KalyanM45/MarketInsight](https://github.com/KalyanM45/MarketInsight); license: GPL-3.0-only; upstream revision: `7fae6d81d09810273fa30f7f50003f42dc51646a`.
+Verification: Attributed GPLv3 workbench; 37 Python tests, 20 desktop/mobile browser cases, installed source/wheel checks, Linux/Windows CI, non-root container and dependency audits passed. Real Yahoo Finance quote/history verified with TLS enabled. Paid AI inference remains unverified; public preview is fictional data.
+[Synthetic reference demo](https://sushant-nemade.github.io/MarketInsight/)
+[Download the reference CLI and source](https://github.com/Sushant-Nemade/MarketInsight/releases/tag/v0.2.0-reference)
+
 ## Categorized Backlog
 
 ### Generative and Agentic AI
 
 - [AI Blog Publisher (BlogBoard)](https://github.com/Sushant-Nemade/ai-blog-publisher) - reference
-- [Market Insight](https://github.com/KalyanM45/MarketInsight) - in_progress
+- [Market Insight Research Workbench](https://github.com/Sushant-Nemade/MarketInsight) - reference
 - [Travel Planning Agent (TravelBrain)](https://github.com/KalyanM45/TravelBrain-Multi-Agent-AI-Travel-Planner) - planned
 
 ### Data and Developer Tools
@@ -63,7 +71,7 @@ Verification: Attributed AGPLv3 derivative; offline CLI, safe caching, reviewed 
 
 ## Delivery Policy
 
-Active implementation: Market Insight. Next pending candidate: Travel Planning Agent (TravelBrain), subject to fresh license and runnable-path audits.
+Active implementation: none. Next pending candidate: Travel Planning Agent (TravelBrain), subject to fresh license and runnable-path audits.
 No automatic daily imports or unattended publishing. Return in a later session to request the next project.
 Healthcare and financial examples remain educational until separately validated for any proposed real use.
 

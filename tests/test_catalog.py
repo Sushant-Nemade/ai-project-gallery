@@ -13,7 +13,7 @@ class CatalogTests(unittest.TestCase):
         validate(self.document)
         self.assertEqual(len(self.document["projects"]), 14)
         references = {project["id"] for project in self.document["projects"] if project["status"] == "reference"}
-        self.assertEqual(references, {"ai-blog-publisher", "gitpulse", "doclify"})
+        self.assertEqual(references, {"ai-blog-publisher", "gitpulse", "doclify", "market-insight"})
         doclify = next(project for project in self.document["projects"] if project["id"] == "doclify")
         self.assertEqual(doclify["license"], "AGPL-3.0-only")
         self.assertIn("live Groq inference unverified", doclify["verification"])

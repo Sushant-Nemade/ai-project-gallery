@@ -1,16 +1,23 @@
 # Project Status and Pending Work Register
 
 **Portfolio owner:** Sushant Nemade  
-**Status reviewed:** 2026-10-14  
-**Scope:** AI Blog Publisher, GitPulse, Doclify, and the in-progress Market Insight adaptation  
+**Last updated:** 2026-10-17
+
+**Scope:** AI Blog Publisher, GitPulse, Doclify, and Market Insight
+
 **Purpose:** Record remaining implementation, verification, deployment and owner decisions without overstating readiness.
 
 ## Executive Summary
 
-Three projects are published as tested reference implementations. Market Insight
-is a fourth project in local development, not a released application. The public
-browser previews for Blog Publisher and GitPulse are available; Doclify is
+Four projects are published as tested reference implementations. Market Insight's
+implementation/release gates are complete; paid model inference and managed
+private hosting remain separate boundaries. Public synthetic browser references
+are available for Blog Publisher, GitPulse and Market Insight; Doclify is
 distributed as an installable CLI with public source and wheel downloads.
+
+The first three projects retain their 2026-10-14 evidence snapshot. Market Insight
+was updated with its 2026-10-17 implementation and release evidence; this update
+does not claim a new live-provider evaluation of the other projects.
 
 Published source, passing tests and a working preview are different from a
 verified live integration or an operated production service. The remaining work
@@ -39,12 +46,12 @@ when the relevant code, dependency lock, configuration or infrastructure changes
 | [AI Blog Publisher](https://github.com/Sushant-Nemade/ai-blog-publisher) | Published reference and [public reader](https://sushant-nemade.github.io/ai-blog-publisher/) | Offline draft/review/publication, mocked graph routing, browser tests and CI. Latest local review: 19 Python tests plus 15 subtests passed. | Real Groq generation, news research and optional R2 integration remain unverified. The displayed article is synthetic. |
 | [GitPulse](https://github.com/Sushant-Nemade/gitpulse) | Published reference and [sample dashboard](https://sushant-nemade.github.io/gitpulse/) | Local API/snapshot tests, browser checks, CI and one real public GitHub REST baseline sync. Latest local review: 20 Python tests passed. | Hosted private API, operational persistence/restore and unattended collection remain unverified or unconfigured. |
 | [Doclify](https://github.com/Sushant-Nemade/Doclify) | Published reference with [public source and wheel downloads](https://github.com/Sushant-Nemade/Doclify/releases/tag/v0.3.0-reference) | Offline CLI, reviewed publication, installed-wheel checks and Linux/Windows CI. Latest local review: 39 Python tests passed; one host-permission symlink test skipped. | Live Groq inference and generated-documentation quality remain unverified. No website is required for the CLI. |
-| Market Insight | Local adaptation in progress; no completed destination release or public service | Six startup/security readiness tests passed; inherited frontend compiles. | Renderer dependencies, UI/API integration, financial tools, full dependency environment, live providers and release CI still need work. |
+| [Market Insight](https://github.com/Sushant-Nemade/MarketInsight) | Published GPLv3 workbench and [synthetic reference](https://sushant-nemade.github.io/MarketInsight/) | 37 Python tests, 20 browser cases, installed-package checks, Linux/Windows CI and non-root container checks. Real Yahoo quote/history verified. | Paid AI inference, individual live financial endpoint availability and managed private hosting remain operator/provider boundaries. |
 
-The latest review found no known dependency vulnerabilities in the three released
-local Python environments or the two released frontend dependency trees. This is
-not a guarantee of future security. Market Insight has a separate unresolved
-frontend audit described below.
+Recorded audits found no known dependency vulnerabilities in the tested released
+dependency sets. Market Insight's formerly affected renderer chain was removed;
+its frontend and Python audits pass. Recheck before subsequent releases; this is
+not a guarantee of future security.
 
 ## 1. AI Blog Publisher
 
@@ -157,37 +164,46 @@ and [reference downloads](https://github.com/Sushant-Nemade/Doclify/releases/tag
 
 ### Current Stage
 
-Only a local readiness stage has been verified. The adaptation is not yet a
-published destination repository/release and is not publicly hosted. The catalog
-entry links the [upstream source](https://github.com/KalyanM45/MarketInsight), not a
-completed Sushant-owned implementation.
+The completed [destination implementation](https://github.com/Sushant-Nemade/MarketInsight)
+preserves the upstream history and GPLv3 license. It replaces the inherited SDK
+and unrestricted agent flow with a typed financial research workspace, bounded
+provider access, private SQLite reports and optional grounded synthesis.
 
-Six tests establish credential-free health checks, protected fail-closed chat,
-input bounds and explicit provider-key/origin separation. The frontend compiles
-with a configurable endpoint instead of the upstream author's hosted API.
-These results do not prove a complete financial-research workflow.
+The complete sample workflow and private API integration are verified, not only
+startup. A real Yahoo Finance quote and 251 history rows were also verified with
+TLS enabled. The [public reference](https://sushant-nemade.github.io/MarketInsight/)
+contains authored fictional companies, never the real smoke-test dataset.
 
-### Release Blockers and Pending Work
+### Gate Resolution and Remaining Boundaries
 
 | ID | Work item | Current blocker/dependency | Completion evidence |
 | --- | --- | --- | --- |
-| MI-01 | Resolve renderer/SDK dependencies | Last audit: ten findings, six low/four moderate, in inherited KaTeX/Prism/C1 SDK chains; compatible automatic fixes unavailable | Select maintained dependencies or verified patches, rebuild and rerun auditing and browser compatibility/security tests. Do not suppress findings or use forced upgrades as proof of safety. |
-| MI-02 | Complete UI/API/authentication integration | Frontend compilation only; the protected API and inherited SDK stream format are not verified together | Real browser tests cover authentication, queries, streaming/rendering, error states, cancellation and conversation boundaries. |
-| MI-03 | Audit financial-data tools | Tool provenance, input/resource limits and error behavior are not verified end-to-end | Bound lookups, retain sources and dates, distinguish missing/stale data, and test failures without fabricated prices or forecasts. |
-| MI-04 | Validate the complete backend environment | Small readiness environment tested; full upstream dependency lock unverified | Trace actual consumers, regenerate frozen dependencies, audit them and reproduce the complete application in supported environments. |
-| MI-05 | Verify chosen model/data providers | No approved live credentials/budget supplied for this stage | Select provider/model, configure the matching key privately, approve costs/terms, then record an actual provider-to-UI smoke test. OpenAI credentials must not be reused for Thesys. |
-| MI-06 | Complete conversation ownership | Shared persistence deliberately absent | Define supported conversation behavior; add identity-scoped storage only with tested authorization, isolation and retention. |
-| MI-07 | Complete release and performance gates | Browser, full-stack, packaging and CI gates pending; inherited main JavaScript chunk roughly 2.9 MB | Reduce or justify delivery costs; run required checks, document limitations and publish an attributed GPLv3 reference only after gates pass. |
-| MI-08 | Operate a hosted application | Not deployed; separate from reference publication | Select frontend/backend hosting, authenticated access, server-side secrets, quotas, monitoring and rollback; verify deployment without exposing an anonymous paid endpoint. |
+| MI-01 | Resolve renderer/SDK dependencies | Completed: C1/KaTeX/Prism renderer chain removed; maintained React/Chart.js/Lucide/Zod stack | Frontend audit, lint, runtime contracts and browser tests pass. |
+| MI-02 | Complete UI/API/authentication integration | Completed as a structured JSON workflow, not the obsolete SDK stream | Actual browser tests verify research, owner connection, saved report reopening/deletion, export and errors on desktop/mobile. |
+| MI-03 | Audit financial-data tools | Completed bounded adapter with dates, explicit missing tables, reporting currency and origin/request limits | Provider fixtures and real quote/history smoke passed. Individual vendor endpoints may still be restricted or unavailable; this is not fabricated or hidden. |
+| MI-04 | Validate complete backend environment | Completed frozen backend/frontend locks; unused tracing/agent dependencies removed | Linux/Windows tests/audits and installed-wheel/source checks pass. |
+| MI-05 | Verify chosen model/data providers | Data quote/history verified; paid AI inference remains unverified and conditional | SDK MockTransport tests verify grounding, fixed origins, token bounds and redaction. Owner must approve/configure paid live synthesis before claiming real model-backed evaluation. |
+| MI-06 | Define research ownership | Completed single-owner report model; shared conversation checkpoints retired | Authenticated SQLite records retain questions/provenance and bounded history. Multi-user identity/conversation persistence remains optional separate scope. |
+| MI-07 | Complete release/performance gates | Completed reference gates; main JS roughly 485 KB rather than ~2.9 MB | 37 Python tests, 20 browser cases, package checks, Linux/Windows CI and non-root container verification pass. |
+| MI-08 | Operate a hosted application | Public fictional reference provided; managed private backend hosting remains optional/unconfigured | Operator chooses HTTPS hosting, access/secrets policy, durable storage, backup and monitoring before exposing private live research. |
 
-### Required Sequence
+### Remaining Operator Work
 
-1. Resolve MI-01 and select the supported renderer/provider protocol.
-2. Complete MI-02, MI-03, MI-04 and supported conversation behavior.
-3. Configure approved live accounts and perform MI-05, or explicitly deliver a
-   separately verified sample mode without claiming live AI/data operation.
-4. Complete MI-07 and publish the tested reference with GPLv3 attribution.
-5. Complete MI-08 only if a hosted-service scope and budget are approved.
+1. Configure an approved model/account/budget and record paid inference evidence
+  only if real AI synthesis is selected. Sample/evidence workflows do not need it.
+2. Recheck financial endpoint availability and provider/data rights for intended use.
+3. Complete managed private hosting only if that service scope is selected.
+4. Maintain dependency audits and human interpretation of financial/model output.
+
+Implementation evidence: [Market Insight release status](https://github.com/Sushant-Nemade/MarketInsight/blob/main/docs/RELEASE_STATUS.md).
+
+The [reference prerelease](https://github.com/Sushant-Nemade/MarketInsight/releases/tag/v0.2.0-reference)
+includes the verified wheel/source archives and SHA-256 checksums at commit
+`07e51ed048e19610c572b6acfe12a54769ebe0b9`.
+[Final CI](https://github.com/Sushant-Nemade/MarketInsight/actions/runs/39065844114)
+and [Pages deployment](https://github.com/Sushant-Nemade/MarketInsight/actions/runs/39066236450)
+passed. The public site was checked at its real repository path on desktop/mobile,
+including nonblank chart pixels and all nine dependency license notices.
 
 No trading execution, personalized investment advice, forecasting accuracy or
 investment-performance guarantee is included in the current stage.
@@ -215,8 +231,8 @@ an appropriate secret manager, never in chat, committed source or this register.
 - Preserve upstream attribution and the applicable MIT/GPL/AGPL license notices.
 - Recheck audits before release; passing checks do not establish an uptime SLA or
   permanent security, privacy, factual-accuracy or domain-suitability guarantee.
-- Work on one new gallery candidate at a time. Do not count the ten other planned
-  candidates as implemented projects or start another while Market Insight is active.
+- Work on one new gallery candidate at a time. Ten other candidates remain planned,
+  not implemented. TravelBrain is next, only on a later explicit request.
 
 ## Related Documents
 

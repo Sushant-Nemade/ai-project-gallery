@@ -85,20 +85,31 @@ workers, archive/path controls, authentication, quotas, deletion/retention polic
 and a prominent corresponding-source offer under the AGPL. Do not add such hosting
 merely to make a CLI portfolio entry look live.
 
-## Next Candidate: Market Insight
+## Market Insight: Completed Reference (2026-10-17)
 
-The next eligible gallery project is Market Insight, with an upstream GPLv3
-license. Initial inspection shows a FastAPI/React application using Yahoo Finance,
-eager agent/tracing initialization, permissive CORS, and a streaming chat endpoint.
-Although its README describes OpenAI, its actual model client targets the
-third-party Thesys gateway. A normal OpenAI key must not be sent to that gateway.
-Its claimed production readiness is not verified.
+The [GPLv3 derivative](https://github.com/Sushant-Nemade/MarketInsight) now has a
+complete source-dated research workspace, bounded data retrieval, private saved
+reports and optional synthesis. The old renderer/agent/tracing path was replaced,
+not silently presented as a working live product. Thirty-seven Python tests,
+twenty browser cases, Linux/Windows builds, installed-package checks, audits and
+the non-root container gate passed. A real Yahoo quote/history lookup was verified
+with TLS enabled. The [public reference](https://sushant-nemade.github.io/MarketInsight/)
+uses authored fictional data only.
 
-Before importing or exposing it: pin the source, reproduce startup, separate
-health checks from credential-dependent clients, bound requests/tool calls,
-disable tracing by default, protect conversation isolation and authenticate any
-shared provider-backed API. Preserve financial-data provenance and distinguish
-educational analysis from advice, forecasting guarantees or executable trades.
-The next implementation must explicitly select and document a provider origin,
-its credentials and data handling. Paid provider use and public API hosting
-require an explicit budget/access decision.
+1. Use the public synthetic reference without credentials, or follow the
+	repository's frozen setup to run the complete UI/API locally.
+2. Configure the private owner token and explicitly enable live data for actual
+	research. Keep reports/database files out of the public site and Git.
+3. If AI synthesis is selected, choose the provider/model and configure the
+	matching key privately. OpenAI and Thesys origins use different keys. Paid
+	inference remains unverified until an approved account/budget smoke is run.
+4. Follow the current operations guide for TLS trust, provider/data rights,
+	persistent storage, access/retention, backup and any remote HTTPS deployment.
+
+No personalized financial advice, forecast accuracy, trading execution,
+multi-user SaaS isolation or operational SLA is claimed.
+
+## Next Candidate
+
+TravelBrain is next in the catalog, subject to a new license/data/runnable-path
+review and a later explicit request. Do not begin another candidate automatically.
