@@ -1,23 +1,27 @@
 # Project Status and Pending Work Register
 
 **Portfolio owner:** Sushant Nemade  
-**Last updated:** 2026-10-17
+**Last updated:** 2026-10-18
 
-**Scope:** AI Blog Publisher, GitPulse, Doclify, and Market Insight
+**Scope:** AI Blog Publisher, GitPulse, Doclify, Market Insight, and TravelBrain
 
 **Purpose:** Record remaining implementation, verification, deployment and owner decisions without overstating readiness.
 
 ## Executive Summary
 
-Four projects are published as tested reference implementations. Market Insight's
+Five projects are published as tested reference implementations. Market Insight's
 implementation/release gates are complete; paid model inference and managed
 private hosting remain separate boundaries. Public synthetic browser references
 are available for Blog Publisher, GitPulse and Market Insight; Doclify is
 distributed as an installable CLI with public source and wheel downloads.
+TravelBrain adds a complete browser/private planning workflow for three catalog
+cities, illustrative budgets and optional weather/AI. It is not a worldwide
+booking or live-fare service.
 
 The first three projects retain their 2026-10-14 evidence snapshot. Market Insight
-was updated with its 2026-10-17 implementation and release evidence; this update
-does not claim a new live-provider evaluation of the other projects.
+was updated with its 2026-10-17 implementation and release evidence; TravelBrain
+records its 2026-10-18 release review below. This update does not claim a new
+live-provider evaluation of the other projects.
 
 Published source, passing tests and a working preview are different from a
 verified live integration or an operated production service. The remaining work
@@ -47,6 +51,7 @@ when the relevant code, dependency lock, configuration or infrastructure changes
 | [GitPulse](https://github.com/Sushant-Nemade/gitpulse) | Published reference and [sample dashboard](https://sushant-nemade.github.io/gitpulse/) | Local API/snapshot tests, browser checks, CI and one real public GitHub REST baseline sync. Latest local review: 20 Python tests passed. | Hosted private API, operational persistence/restore and unattended collection remain unverified or unconfigured. |
 | [Doclify](https://github.com/Sushant-Nemade/Doclify) | Published reference with [public source and wheel downloads](https://github.com/Sushant-Nemade/Doclify/releases/tag/v0.3.0-reference) | Offline CLI, reviewed publication, installed-wheel checks and Linux/Windows CI. Latest local review: 39 Python tests passed; one host-permission symlink test skipped. | Live Groq inference and generated-documentation quality remain unverified. No website is required for the CLI. |
 | [Market Insight](https://github.com/Sushant-Nemade/MarketInsight) | Published GPLv3 workbench and [synthetic reference](https://sushant-nemade.github.io/MarketInsight/) | 37 Python tests, 20 browser cases, installed-package checks, Linux/Windows CI and non-root container checks. Real Yahoo quote/history verified. | Paid AI inference, individual live financial endpoint availability and managed private hosting remain operator/provider boundaries. |
+| [TravelBrain](https://github.com/Sushant-Nemade/TravelBrain) | GPLv3 planning workbench and [illustrative reference](https://sushant-nemade.github.io/TravelBrain/) | 27 Python tests, 27 browser/server parity combinations, 14 browser cases, installed wheel/source checks, clear dependency audits and a real Open-Meteo forecast. | Groq inference, commercial weather arrangements and managed private hosting remain conditional. No live flight/hotel availability or booking is implemented. |
 
 Recorded audits found no known dependency vulnerabilities in the tested released
 dependency sets. Market Insight's formerly affected renderer chain was removed;
@@ -208,6 +213,51 @@ including nonblank chart pixels and all nine dependency license notices.
 No trading execution, personalized investment advice, forecasting accuracy or
 investment-performance guarantee is included in the current stage.
 
+## 5. TravelBrain
+
+### Completed Baseline
+
+- Attributed GPLv3 fork preserving upstream history and source
+  `59db5bb0f1aeebd593a5114c67f8e619afceb25a`.
+- Paris/Lisbon/Kyoto catalog; 1-10 days, 1-8 travelers, interests, pace and activity exclusions.
+- Source-linked, non-repeating itinerary slots; explicit unallocated time when
+  catalog coverage is insufficient, not invented places or opening hours.
+- Exact minor-unit budgets with illustrative allowances/FX, exclusions and over-budget warnings.
+- Browser-local saved trips plus authenticated private SQLite create/update/reopen/delete;
+  stale revisions fail visibly. JSON/Markdown export and printing work.
+- Optional fixed-origin Open-Meteo and Groq adapters with bounded responses,
+  timeouts, concurrency, requests and output; no browser provider-key/database intake.
+- Twenty-seven Python tests, including 27 cross-runtime planning combinations;
+  fourteen desktop/mobile browser cases and an installed wheel outside checkout pass.
+- A real two-day Paris forecast was observed through the actual adapter at
+  2026-10-17T23:59:13+00:00 with TLS verification enabled. No raw forecast was published.
+
+### Remaining Boundaries
+
+| ID | Work item | Classification | Acceptance evidence |
+| --- | --- | --- | --- |
+| TB-01 | Verify live Groq commentary and quality | Conditional on approved account/model/budget and trip-data upload consent | A real bounded response is checked against itinerary evidence; unsupported advice is corrected. Mocks are not live-inference proof. |
+| TB-02 | Confirm itinerary details before travel | User/provider boundary, not a completed live-data claim | Opening hours, reservations, prices, transfers and accessibility are independently checked with current authoritative sources. |
+| TB-03 | Operate a private hosted service | Optional/unconfigured | HTTPS, restricted access, durable storage, permissions, exercised restore, retention and maintenance ownership are established. |
+| TB-04 | Broaden cities, live fares or bookings | Optional expansion, not implemented | Review data/provider rights, reliability and domain-specific evaluation before adding each capability. Do not promise worldwide support or transactions. |
+| TB-05 | Commercial weather use | Conditional on intended use | Review Open-Meteo hosted API terms, quota and any required commercial arrangement; current free adapter uses non-commercial terms and visible attribution. |
+
+Public trips contain authored planning data, illustrative prices and no private
+records. Source links identify places, not verified availability or prices.
+Step-free filtering is a preference, not an accessibility certification. Free-text
+notes are retained but not interpreted by the deterministic constraint engine.
+
+Evidence: [release status](https://github.com/Sushant-Nemade/TravelBrain/blob/main/docs/RELEASE_STATUS.md),
+[reference downloads](https://github.com/Sushant-Nemade/TravelBrain/releases/tag/v0.2.0-reference)
+and [verification workflow](https://github.com/Sushant-Nemade/TravelBrain/actions/runs/39081518635).
+
+Source commit `7420dfa6eddab69cd18c9584c9f347be8e54610a` passed Linux 3.11/3.13,
+Windows 3.13 and the non-root container HTTP gates. The
+[public deployment](https://github.com/Sushant-Nemade/TravelBrain/actions/runs/39081832232)
+passed; the real repository-path site was checked on mobile, including local
+photo/notices and successful Kyoto itinerary generation. The prerelease contains
+the successful CI's wheel/source assets and SHA-256 checksums.
+
 ## Cross-Project Owner Decisions
 
 | Decision | Why it is needed | Responsible role |
@@ -231,8 +281,8 @@ an appropriate secret manager, never in chat, committed source or this register.
 - Preserve upstream attribution and the applicable MIT/GPL/AGPL license notices.
 - Recheck audits before release; passing checks do not establish an uptime SLA or
   permanent security, privacy, factual-accuracy or domain-suitability guarantee.
-- Work on one new gallery candidate at a time. Ten other candidates remain planned,
-  not implemented. TravelBrain is next, only on a later explicit request.
+- Work on one new gallery candidate at a time. Nine other candidates remain planned,
+  not implemented. Do not start another candidate without a later explicit request.
 
 ## Related Documents
 

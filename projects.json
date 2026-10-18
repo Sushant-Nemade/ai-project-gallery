@@ -52,7 +52,17 @@
       "demo": "https://sushant-nemade.github.io/MarketInsight/",
       "release": "https://github.com/Sushant-Nemade/MarketInsight/releases/tag/v0.2.0-reference"
     },
-    {"id": "travelbrain", "name": "Travel Planning Agent (TravelBrain)", "category": "generative-agentic-ai", "source": "https://github.com/KalyanM45/TravelBrain-Multi-Agent-AI-Travel-Planner", "status": "planned"},
+    {
+      "id": "travelbrain", "name": "TravelBrain Trip Workbench",
+      "category": "generative-agentic-ai", "portfolio_category": "Responsible automation",
+      "source": "https://github.com/KalyanM45/TravelBrain-Multi-Agent-AI-Travel-Planner",
+      "source_commit": "59db5bb0f1aeebd593a5114c67f8e619afceb25a", "license": "GPL-3.0-only",
+      "repository": "https://github.com/Sushant-Nemade/TravelBrain", "status": "reference",
+      "tags": ["Python", "FastAPI", "travel-planning", "provenance", "SQLite"],
+      "verification": "Attributed GPLv3 workbench for Paris/Lisbon/Kyoto; 27 Python tests including 27 browser/server parity combinations, 14 desktop/mobile browser cases, installed wheel/source checks and audits passed. Live Open-Meteo forecast verified with TLS. Groq inference remains unverified; costs are illustrative, not live fares or bookings.",
+      "demo": "https://sushant-nemade.github.io/TravelBrain/",
+      "release": "https://github.com/Sushant-Nemade/TravelBrain/releases/tag/v0.2.0-reference"
+    },
     {"id": "airbnb-prices", "name": "Airbnb Price Prediction", "category": "predictive-machine-learning", "source": "https://github.com/KalyanMurapaka45/End-to-End-Airbnb-Price-Prediction", "status": "planned"},
     {"id": "boston-housing", "name": "Boston House Price Prediction", "category": "predictive-machine-learning", "source": "https://github.com/KalyanMurapaka45/House-Price-Prediction", "status": "planned"},
     {"id": "diamond-prices", "name": "Diamond Price Prediction", "category": "predictive-machine-learning", "source": "https://github.com/KalyanM45/Diamond-Price-Prediction", "status": "planned"},

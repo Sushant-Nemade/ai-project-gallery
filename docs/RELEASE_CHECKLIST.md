@@ -109,7 +109,28 @@ uses authored fictional data only.
 No personalized financial advice, forecast accuracy, trading execution,
 multi-user SaaS isolation or operational SLA is claimed.
 
+## TravelBrain: Completed Reference (2026-10-18)
+
+The [GPLv3 workbench](https://github.com/Sushant-Nemade/TravelBrain) supports a
+complete plan/review/edit/save/reopen/export workflow for Paris, Lisbon and Kyoto.
+The [public reference](https://sushant-nemade.github.io/TravelBrain/) compiles plans
+without keys; costs/FX are illustrative, not live offers. Browser trips remain
+in that browser; the private API uses a separate owner token and SQLite database.
+
+1. Follow the frozen source setup or install the reference package with its UI.
+2. Configure the private owner token locally if server persistence is wanted.
+3. Explicitly enable Open-Meteo weather only under appropriate terms/limits.
+	A real forecast smoke passed; distant dates remain unavailable rather than fabricated.
+4. Configure Groq/model privately only after account/budget/upload-consent review.
+	Live inference remains unverified; no public anonymous paid endpoint is enabled.
+5. Before remote private hosting, establish HTTPS/access, durable storage,
+	backup/restore, retention and maintenance. No managed service is purchased here.
+
+No flight/hotel availability, booking, opening-hours/access guarantee, multi-city
+optimization, multi-user service or production SLA is claimed.
+
 ## Next Candidate
 
-TravelBrain is next in the catalog, subject to a new license/data/runnable-path
-review and a later explicit request. Do not begin another candidate automatically.
+Nine catalog candidates remain. Select one in a later request and recheck its
+source, license, data rights and runnable path before implementation. Do not
+begin another candidate automatically or treat earlier ranking as verified feasibility.
