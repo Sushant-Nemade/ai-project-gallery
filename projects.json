@@ -61,7 +61,7 @@
       "tags": ["Python", "FastAPI", "travel-planning", "provenance", "SQLite"],
       "verification": "Attributed GPLv3 workbench for Paris/Lisbon/Kyoto; 27 Python tests including 27 browser/server parity combinations, 14 desktop/mobile browser cases, installed wheel/source checks and audits passed. Live Open-Meteo forecast verified with TLS. Groq inference remains unverified; costs are illustrative, not live fares or bookings.",
       "demo": "https://sushant-nemade.github.io/TravelBrain/",
-      "release": "https://github.com/Sushant-Nemade/TravelBrain/releases/tag/v0.2.0-reference"
+      "release": "https://github.com/Sushant-Nemade/TravelBrain/releases/tag/v0.2.1-reference"
     },
     {"id": "airbnb-prices", "name": "Airbnb Price Prediction", "category": "predictive-machine-learning", "source": "https://github.com/KalyanMurapaka45/End-to-End-Airbnb-Price-Prediction", "status": "planned"},
     {"id": "boston-housing", "name": "Boston House Price Prediction", "category": "predictive-machine-learning", "source": "https://github.com/KalyanMurapaka45/House-Price-Prediction", "status": "planned"},

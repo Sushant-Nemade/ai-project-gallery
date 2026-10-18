@@ -44,7 +44,7 @@ Primary category: **Generative and Agentic AI**. Portfolio placement: **Responsi
 Source: [https://github.com/KalyanM45/TravelBrain-Multi-Agent-AI-Travel-Planner](https://github.com/KalyanM45/TravelBrain-Multi-Agent-AI-Travel-Planner); license: GPL-3.0-only; upstream revision: `59db5bb0f1aeebd593a5114c67f8e619afceb25a`.
 Verification: Attributed GPLv3 workbench for Paris/Lisbon/Kyoto; 27 Python tests including 27 browser/server parity combinations, 14 desktop/mobile browser cases, installed wheel/source checks and audits passed. Live Open-Meteo forecast verified with TLS. Groq inference remains unverified; costs are illustrative, not live fares or bookings.
 [Synthetic reference demo](https://sushant-nemade.github.io/TravelBrain/)
-[Download the reference CLI and source](https://github.com/Sushant-Nemade/TravelBrain/releases/tag/v0.2.0-reference)
+[Download the reference CLI and source](https://github.com/Sushant-Nemade/TravelBrain/releases/tag/v0.2.1-reference)
 
 ## Categorized Backlog
 

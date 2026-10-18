@@ -248,15 +248,19 @@ Step-free filtering is a preference, not an accessibility certification. Free-te
 notes are retained but not interpreted by the deterministic constraint engine.
 
 Evidence: [release status](https://github.com/Sushant-Nemade/TravelBrain/blob/main/docs/RELEASE_STATUS.md),
-[reference downloads](https://github.com/Sushant-Nemade/TravelBrain/releases/tag/v0.2.0-reference)
-and [verification workflow](https://github.com/Sushant-Nemade/TravelBrain/actions/runs/39081518635).
+[reference downloads](https://github.com/Sushant-Nemade/TravelBrain/releases/tag/v0.2.1-reference)
+and [verification workflow](https://github.com/Sushant-Nemade/TravelBrain/actions/runs/39083316338).
 
-Source commit `7420dfa6eddab69cd18c9584c9f347be8e54610a` passed Linux 3.11/3.13,
+Source commit `67b224b130917ac22b1f0e7b3cfcb43f6a9a6e57` passed Linux 3.11/3.13,
 Windows 3.13 and the non-root container HTTP gates. The
-[public deployment](https://github.com/Sushant-Nemade/TravelBrain/actions/runs/39081832232)
+[public deployment](https://github.com/Sushant-Nemade/TravelBrain/actions/runs/39083633992)
 passed; the real repository-path site was checked on mobile, including local
 photo/notices and successful Kyoto itinerary generation. The prerelease contains
 the successful CI's wheel/source assets and SHA-256 checksums.
+Version 0.2.1 corrects the earlier Lisbon image with a verified Wikimedia photo,
+visible creator/CC BY 4.0 credit and five bundled notice records. Package checks
+select the current version and reject stale/missing UI assets. Version 0.2.0 is
+marked superseded; its original tag and archives were not silently replaced.
 
 ## Cross-Project Owner Decisions
 
