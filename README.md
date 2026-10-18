@@ -9,19 +9,23 @@ Planned entries are links only: their code, data, model licenses and runtime sti
 
 ## Published Reference Implementations
 
+[Open the public demo directory](https://sushant-ai-demos.pages.dev/). Cloudflare Pages hosts these reference builds independently of any local computer; private APIs and model credentials are not exposed.
+
 ### [AI Blog Publisher (BlogBoard)](https://github.com/Sushant-Nemade/ai-blog-publisher)
 
 Primary category: **Generative and Agentic AI**. Portfolio placement: **Responsible automation**.
 Source: [https://github.com/KalyanM45/Multi-Agentic-Blog-Generation](https://github.com/KalyanM45/Multi-Agentic-Blog-Generation); license: MIT; upstream revision: `8b743e21ac0e940dc8bd159f5d94a8f5eb17c630`.
 Verification: Offline workflow, Linux/Windows CI and hosted browser checks passed; live AI/search/R2 integrations unverified.
-[Synthetic reference demo](https://sushant-nemade.github.io/ai-blog-publisher/)
+[Open public reference demo](https://sushant-ai-demos.pages.dev/ai-blog-publisher/)
+[GitHub Pages fallback](https://sushant-nemade.github.io/ai-blog-publisher/)
 
 ### [GitPulse: Audience Workspace](https://github.com/Sushant-Nemade/gitpulse)
 
 Primary category: **Data and Developer Tools**. Portfolio placement: **Trustworthy data and developer tools**.
 Concept reference: [https://github.com/KalyanM45/GitPulse](https://github.com/KalyanM45/GitPulse); source license: unverified MIT claim. No upstream code imported; original implementation license: MIT; specification revision: `8af259174045fce5c081b36e36b407df82834823`.
 Verification: Original code; strict typing, security audits, desktop/mobile tests, Linux/Windows CI, hosted fictional demo and one public GitHub REST sync verified. Hosted private API remains unverified.
-[Synthetic reference demo](https://sushant-nemade.github.io/gitpulse/)
+[Open public reference demo](https://sushant-ai-demos.pages.dev/gitpulse/)
+[GitHub Pages fallback](https://sushant-nemade.github.io/gitpulse/)
 
 ### [Doclify](https://github.com/Sushant-Nemade/Doclify)
 
@@ -35,7 +39,8 @@ Verification: Attributed AGPLv3 derivative; offline CLI, safe caching, reviewed 
 Primary category: **Generative and Agentic AI**. Portfolio placement: **Trustworthy data and developer tools**.
 Source: [https://github.com/KalyanM45/MarketInsight](https://github.com/KalyanM45/MarketInsight); license: GPL-3.0-only; upstream revision: `7fae6d81d09810273fa30f7f50003f42dc51646a`.
 Verification: Attributed GPLv3 workbench; 37 Python tests, 20 desktop/mobile browser cases, installed source/wheel checks, Linux/Windows CI, non-root container and dependency audits passed. Real Yahoo Finance quote/history verified with TLS enabled. Paid AI inference remains unverified; public preview is fictional data.
-[Synthetic reference demo](https://sushant-nemade.github.io/MarketInsight/)
+[Open public reference demo](https://sushant-ai-demos.pages.dev/MarketInsight/)
+[GitHub Pages fallback](https://sushant-nemade.github.io/MarketInsight/)
 [Download the reference CLI and source](https://github.com/Sushant-Nemade/MarketInsight/releases/tag/v0.2.0-reference)
 
 ### [TravelBrain Trip Workbench](https://github.com/Sushant-Nemade/TravelBrain)
@@ -43,7 +48,8 @@ Verification: Attributed GPLv3 workbench; 37 Python tests, 20 desktop/mobile bro
 Primary category: **Generative and Agentic AI**. Portfolio placement: **Responsible automation**.
 Source: [https://github.com/KalyanM45/TravelBrain-Multi-Agent-AI-Travel-Planner](https://github.com/KalyanM45/TravelBrain-Multi-Agent-AI-Travel-Planner); license: GPL-3.0-only; upstream revision: `59db5bb0f1aeebd593a5114c67f8e619afceb25a`.
 Verification: Attributed GPLv3 workbench for Paris/Lisbon/Kyoto; 27 Python tests including 27 browser/server parity combinations, 14 desktop/mobile browser cases, installed wheel/source checks and audits passed. Live Open-Meteo forecast verified with TLS. Groq inference remains unverified; costs are illustrative, not live fares or bookings.
-[Synthetic reference demo](https://sushant-nemade.github.io/TravelBrain/)
+[Open public reference demo](https://sushant-ai-demos.pages.dev/TravelBrain/)
+[GitHub Pages fallback](https://sushant-nemade.github.io/TravelBrain/)
 [Download the reference CLI and source](https://github.com/Sushant-Nemade/TravelBrain/releases/tag/v0.2.1-reference)
 
 ## Categorized Backlog
@@ -83,7 +89,7 @@ Active implementation: none. Next pending candidate: Airbnb Price Prediction, su
 No automatic daily imports or unattended publishing. Return in a later session to request the next project.
 Healthcare and financial examples remain educational until separately validated for any proposed real use.
 
-[Project status and pending work](docs/PROJECT_STATUS_AND_PENDING_WORK.md) | [Release checklist](docs/RELEASE_CHECKLIST.md) | [Portfolio](https://sushant-nemade.github.io/)
+[Project status and pending work](docs/PROJECT_STATUS_AND_PENDING_WORK.md) | [Release checklist](docs/RELEASE_CHECKLIST.md) | [Public hosting runbook](docs/PUBLIC_DEMOS.md) | [Portfolio](https://sushant-nemade.github.io/)
 
 ## Maintain the Catalog
 

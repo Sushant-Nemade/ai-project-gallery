@@ -9,6 +9,7 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = "https://github.com/KalyanM45/AI-Project-Gallery"
 STATES = {"planned", "in_progress", "reference", "blocked"}
+DEMO_ORIGINS = {"sushant-nemade.github.io", "sushant-ai-demos.pages.dev"}
 
 
 def github_url(value, owners):
@@ -45,8 +46,13 @@ def validate(document):
                     or not github_url(project.get("repository", ""), {"Sushant-Nemade"})
                     or not project.get("verification")):
                 raise ValueError("published reference requires attribution and verification evidence")
-            if project.get("demo") and not project["demo"].startswith("https://sushant-nemade.github.io/"):
-                raise ValueError("demo must belong to the destination portfolio")
+            for field in ("demo", "demo_fallback"):
+                if project.get(field):
+                    address = urlparse(project[field])
+                    expected = "/" + project["repository"].rsplit("/", 1)[-1] + "/"
+                    if (address.scheme != "https" or address.netloc not in DEMO_ORIGINS
+                            or address.path != expected or address.query or address.fragment):
+                        raise ValueError("demo must use an owned HTTPS host and the project's exact path")
             if project.get("release") and not project["release"].startswith(project["repository"] + "/releases/tag/"):
                 raise ValueError("download release must belong to the project repository")
     if active > 1:
@@ -60,7 +66,8 @@ def render(document):
              f"Discovery source: [{SOURCE}]({SOURCE}). Eligibility snapshot: {document['eligibility_reviewed_on']}.", "",
              "One project is implemented at a time. Source-gallery end-to-end checkmarks are eligibility signals, not production certification.",
              "Planned entries are links only: their code, data, model licenses and runtime still require audit.", "",
-             "## Published Reference Implementations", ""]
+             "## Published Reference Implementations", "",
+             "[Open the public demo directory](https://sushant-ai-demos.pages.dev/). Cloudflare Pages hosts these reference builds independently of any local computer; private APIs and model credentials are not exposed.", ""]
     for project in document["projects"]:
         if project["status"] != "reference":
             continue
@@ -73,7 +80,9 @@ def render(document):
               source_notice,
                   f"Verification: {project['verification']}"]
         if project.get("demo"):
-            lines.append(f"[Synthetic reference demo]({project['demo']})")
+            lines.append(f"[Open public reference demo]({project['demo']})")
+        if project.get("demo_fallback"):
+            lines.append(f"[GitHub Pages fallback]({project['demo_fallback']})")
         if project.get("release"):
             lines.append(f"[Download the reference CLI and source]({project['release']})")
         lines.append("")
@@ -89,7 +98,7 @@ def render(document):
     lines += ["## Delivery Policy", "", f"Active implementation: {active_name or 'none'}. Next pending candidate: {pending_name}, subject to fresh license and runnable-path audits.",
               "No automatic daily imports or unattended publishing. Return in a later session to request the next project.",
               "Healthcare and financial examples remain educational until separately validated for any proposed real use.", "",
-              "[Project status and pending work](docs/PROJECT_STATUS_AND_PENDING_WORK.md) | [Release checklist](docs/RELEASE_CHECKLIST.md) | [Portfolio](https://sushant-nemade.github.io/)", "",
+              "[Project status and pending work](docs/PROJECT_STATUS_AND_PENDING_WORK.md) | [Release checklist](docs/RELEASE_CHECKLIST.md) | [Public hosting runbook](docs/PUBLIC_DEMOS.md) | [Portfolio](https://sushant-nemade.github.io/)", "",
               "## Maintain the Catalog", "", "```text", "python -m tools.catalog", "python -m tools.catalog --check",
               "python -m unittest discover -s tests -v", "```", "",
               "Edit projects.json, then regenerate this README. Preserve source attribution and distinguish local tests from live integration evidence.", ""]

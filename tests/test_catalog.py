@@ -58,3 +58,14 @@ class CatalogTests(unittest.TestCase):
         doclify["release"] = "https://github.com/another-owner/project/releases/tag/v1"
         with self.assertRaises(ValueError):
             validate(self.document)
+
+    def test_demo_origins_and_paths_are_exact(self):
+        project = self.document["projects"][0]
+        self.assertIn("https://sushant-ai-demos.pages.dev/ai-blog-publisher/", render(self.document))
+        for address in ("http://localhost:8886/", "https://sushant-ai-demos.pages.dev.evil.test/ai-blog-publisher/",
+                        "https://sushant-ai-demos.pages.dev/other-project/",
+                        "https://sushant-ai-demos.pages.dev/ai-blog-publisher/?token=value"):
+            with self.subTest(address=address):
+                project["demo"] = address
+                with self.assertRaises(ValueError):
+                    validate(self.document)

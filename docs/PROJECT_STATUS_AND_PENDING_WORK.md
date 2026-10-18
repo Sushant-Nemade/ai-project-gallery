@@ -53,6 +53,21 @@ when the relevant code, dependency lock, configuration or infrastructure changes
 | [Market Insight](https://github.com/Sushant-Nemade/MarketInsight) | Published GPLv3 workbench and [synthetic reference](https://sushant-nemade.github.io/MarketInsight/) | 37 Python tests, 20 browser cases, installed-package checks, Linux/Windows CI and non-root container checks. Real Yahoo quote/history verified. | Paid AI inference, individual live financial endpoint availability and managed private hosting remain operator/provider boundaries. |
 | [TravelBrain](https://github.com/Sushant-Nemade/TravelBrain) | GPLv3 planning workbench and [illustrative reference](https://sushant-nemade.github.io/TravelBrain/) | 27 Python tests, 27 browser/server parity combinations, 14 browser cases, installed wheel/source checks, clear dependency audits and a real Open-Meteo forecast. | Groq inference, commercial weather arrangements and managed private hosting remain conditional. No live flight/hotel availability or booking is implemented. |
 
+### Public Access Update
+
+The four web references are now also deployed on Cloudflare Pages, independently
+of local computers or tunnels: [public demo directory](https://sushant-ai-demos.pages.dev/).
+The catalog's primary URLs point there; the GitHub Pages URLs above remain
+independent fallbacks. Doclify remains a downloadable CLI, not a hosted service.
+Ten desktop/mobile hosted checks passed, including nonblank charts, article
+navigation and TravelBrain plan/save/export. Private API, database and environment
+paths were rejected. No local API or paid provider endpoint was exposed.
+
+See [public hosting and update/rollback runbook](PUBLIC_DEMOS.md) for selected
+source builds, artifact expiration, safety checks and manual production updates.
+This changes public-reference hosting, not any live-provider/private-hosting
+boundary recorded below. No paid services or unattended publishing were enabled.
+
 Recorded audits found no known dependency vulnerabilities in the tested released
 dependency sets. Market Insight's formerly affected renderer chain was removed;
 its frontend and Python audits pass. Recheck before subsequent releases; this is
