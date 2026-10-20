@@ -67,7 +67,7 @@ def render(document):
              "One project is implemented at a time. Source-gallery end-to-end checkmarks are eligibility signals, not production certification.",
              "Planned entries are links only: their code, data, model licenses and runtime still require audit.", "",
              "## Published Reference Implementations", "",
-             "[Open the public demo directory](https://sushant-ai-demos.pages.dev/). Cloudflare Pages hosts these reference builds independently of any local computer; private APIs and model credentials are not exposed.", ""]
+             "Public reference links below use Cloudflare Pages or GitHub Pages and do not depend on a local computer. [Cloudflare collection](https://sushant-ai-demos.pages.dev/) contains four pinned mirrors; the Airbnb model has its own verified GitHub Pages deployment. Private APIs and credentials are not exposed.", ""]
     for project in document["projects"]:
         if project["status"] != "reference":
             continue

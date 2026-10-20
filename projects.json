@@ -67,7 +67,19 @@
       "demo_fallback": "https://sushant-nemade.github.io/TravelBrain/",
       "release": "https://github.com/Sushant-Nemade/TravelBrain/releases/tag/v0.2.1-reference"
     },
-    {"id": "airbnb-prices", "name": "Airbnb Price Prediction", "category": "predictive-machine-learning", "source": "https://github.com/KalyanMurapaka45/End-to-End-Airbnb-Price-Prediction", "status": "planned"},
+    {
+      "id": "airbnb-prices", "name": "Airbnb Price Workbench (NYC 2019)",
+      "category": "predictive-machine-learning", "portfolio_category": "Interactive AI, computer vision and learning systems",
+      "source": "https://github.com/KalyanM45/End-to-End-Airbnb-Price-Prediction",
+      "source_commit": "2b6dc21406cfe0a24d303d1db12505403abed52e",
+      "implementation": "original", "upstream_code_imported": false,
+      "source_license": "No license detected at pinned revision; no upstream code imported",
+      "license": "MIT", "repository": "https://github.com/Sushant-Nemade/airbnb-price-workbench", "status": "reference",
+      "tags": ["Python", "scikit-learn", "ONNX", "TypeScript", "model-evaluation"],
+      "verification": "Original MIT implementation with separately licensed NYC2019 dataset; actual browser ONNX inference, 18 Python tests, 16 desktop/mobile browser cases, 30 authored cross-runtime probes, installed packages, Linux/Windows/container CI, audits and independent data/training reproduction passed. Host-disjoint test MAE48.80 USD versus52.66 borough/room baseline; historical interval coverage90.81%. Not a current quote or booking service; no upstream code/model/data imported.",
+      "demo": "https://sushant-nemade.github.io/airbnb-price-workbench/",
+      "release": "https://github.com/Sushant-Nemade/airbnb-price-workbench/releases/tag/v0.1.0-reference"
+    },
     {"id": "boston-housing", "name": "Boston House Price Prediction", "category": "predictive-machine-learning", "source": "https://github.com/KalyanMurapaka45/House-Price-Prediction", "status": "planned"},
     {"id": "diamond-prices", "name": "Diamond Price Prediction", "category": "predictive-machine-learning", "source": "https://github.com/KalyanM45/Diamond-Price-Prediction", "status": "planned"},
     {"id": "flight-fares", "name": "Flight Fare Prediction", "category": "predictive-machine-learning", "source": "https://github.com/KalyanMurapaka45/Flight-Fare-Prediction", "status": "planned"},

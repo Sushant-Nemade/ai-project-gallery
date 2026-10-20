@@ -1,15 +1,15 @@
 # Project Status and Pending Work Register
 
 **Portfolio owner:** Sushant Nemade  
-**Last updated:** 2026-10-18
+**Last updated:** 2026-10-20
 
-**Scope:** AI Blog Publisher, GitPulse, Doclify, Market Insight, and TravelBrain
+**Scope:** AI Blog Publisher, GitPulse, Doclify, Market Insight, TravelBrain, and Airbnb Price Workbench
 
 **Purpose:** Record remaining implementation, verification, deployment and owner decisions without overstating readiness.
 
 ## Executive Summary
 
-Five projects are published as tested reference implementations. Market Insight's
+Six projects are published as tested reference implementations. Market Insight's
 implementation/release gates are complete; paid model inference and managed
 private hosting remain separate boundaries. Public synthetic browser references
 are available for Blog Publisher, GitPulse and Market Insight; Doclify is
@@ -17,10 +17,14 @@ distributed as an installable CLI with public source and wheel downloads.
 TravelBrain adds a complete browser/private planning workflow for three catalog
 cities, illustrative budgets and optional weather/AI. It is not a worldwide
 booking or live-fare service.
+Airbnb Price Workbench adds an original MIT implementation with separately
+licensed NYC2019 data, host-disjoint evaluation and real browser ONNX predictions.
+Its historical benchmark is not a current-market price or revenue guarantee.
 
 The first three projects retain their 2026-10-14 evidence snapshot. Market Insight
 was updated with its 2026-10-17 implementation and release evidence; TravelBrain
-records its 2026-10-18 release review below. This update does not claim a new
+records its 2026-10-18 release review below; Airbnb records its 2026-10-20 release.
+This update does not claim a new
 live-provider evaluation of the other projects.
 
 Published source, passing tests and a working preview are different from a
@@ -52,6 +56,7 @@ when the relevant code, dependency lock, configuration or infrastructure changes
 | [Doclify](https://github.com/Sushant-Nemade/Doclify) | Published reference with [public source and wheel downloads](https://github.com/Sushant-Nemade/Doclify/releases/tag/v0.3.0-reference) | Offline CLI, reviewed publication, installed-wheel checks and Linux/Windows CI. Latest local review: 39 Python tests passed; one host-permission symlink test skipped. | Live Groq inference and generated-documentation quality remain unverified. No website is required for the CLI. |
 | [Market Insight](https://github.com/Sushant-Nemade/MarketInsight) | Published GPLv3 workbench and [synthetic reference](https://sushant-nemade.github.io/MarketInsight/) | 37 Python tests, 20 browser cases, installed-package checks, Linux/Windows CI and non-root container checks. Real Yahoo quote/history verified. | Paid AI inference, individual live financial endpoint availability and managed private hosting remain operator/provider boundaries. |
 | [TravelBrain](https://github.com/Sushant-Nemade/TravelBrain) | GPLv3 planning workbench and [illustrative reference](https://sushant-nemade.github.io/TravelBrain/) | 27 Python tests, 27 browser/server parity combinations, 14 browser cases, installed wheel/source checks, clear dependency audits and a real Open-Meteo forecast. | Groq inference, commercial weather arrangements and managed private hosting remain conditional. No live flight/hotel availability or booking is implemented. |
+| [Airbnb Price Workbench](https://github.com/Sushant-Nemade/airbnb-price-workbench) | Original MIT project and [actual browser model](https://sushant-nemade.github.io/airbnb-price-workbench/) | 18 Python tests, 16 browser cases, 30 authored sklearn/browser parity scenarios, real-data training reproduction, installed packages, Linux/Windows/container gates and audits pass. | NYC2019 filtered scope only; no temporal/current-market, revenue or individual-coverage guarantee. |
 
 ### Public Access Update
 
@@ -59,6 +64,9 @@ The four web references are now also deployed on Cloudflare Pages, independently
 of local computers or tunnels: [public demo directory](https://sushant-ai-demos.pages.dev/).
 The catalog's primary URLs point there; the GitHub Pages URLs above remain
 independent fallbacks. Doclify remains a downloadable CLI, not a hosted service.
+Airbnb Price Workbench is separately hosted on GitHub Pages. Its public model
+works without a local computer or Python server; the existing Cloudflare
+collection was not changed because account sign-in was unavailable this session.
 Ten desktop/mobile hosted checks passed, including nonblank charts, article
 navigation and TravelBrain plan/save/export. Private API, database and environment
 paths were rejected. No local API or paid provider endpoint was exposed.
@@ -277,6 +285,44 @@ visible creator/CC BY 4.0 credit and five bundled notice records. Package checks
 select the current version and reject stale/missing UI assets. Version 0.2.0 is
 marked superseded; its original tag and archives were not silently replaced.
 
+## 6. Airbnb Price Workbench
+
+### Completed Reference
+
+- Original MIT code/model; no code, data, saved model or assets imported from the
+  unlicensed gallery reference at `2b6dc21406cfe0a24d303d1db12505403abed52e`.
+- Separately reviewed Kaggle NYC2019 version3, publisher CC0/Inside Airbnb credit,
+  checksum-pinned fetch, 48,895 source/47,924 eligible rows. Raw rows and identifiers
+  are not redistributed; published parity scenarios are authored examples.
+- Host-disjoint train/selection/calibration/test partitions. Test7,092 listings:
+  MAE48.80 USD versus52.66 borough/room median and69.51 global median; RMSE90.71,
+  R-squared0.357. Historical interval coverage90.81%, mean width201.81 USD.
+- Actual ONNX model in Python and browser; integrity bounds/checksum, single-input
+  and local CSV prediction, saved browser scenarios, evidence and JSON/CSV exports.
+- Eighteen Python and sixteen browser cases pass; all30 authored sklearn parity
+  scenarios agree within3 cents on desktop/mobile. Audits, installed artifacts,
+  Linux3.11/3.13, Windows3.13, non-root Docker and actual-data retraining gates pass.
+- Source `b6cf6931dc4d47f8617656e11352757ec989c2df`,
+  [CI39344597914](https://github.com/Sushant-Nemade/airbnb-price-workbench/actions/runs/39344597914),
+  [Pages39344969201](https://github.com/Sushant-Nemade/airbnb-price-workbench/actions/runs/39344969201)
+  and the [verified source/wheel release](https://github.com/Sushant-Nemade/airbnb-price-workbench/releases/tag/v0.1.0-reference)
+  are published. The real repository-path browser app passed parity/export/image/
+  chart/layout/notice/private-path checks on desktop/mobile.
+
+### Remaining Boundaries
+
+| ID | Work item | Classification | Acceptance evidence |
+| --- | --- | --- | --- |
+| AP-01 | Newer data/current-market evaluation | Optional new scope; required before current-price claims | Review rights/source, retrain and evaluate defensible temporal and geographic holdouts; retain drift/uncertainty evidence. |
+| AP-02 | Stronger interval/group validation | Required before stronger coverage claims | Evaluate dependence, segment coverage and distribution shift. Current empirical marginal coverage is not an individual guarantee. |
+| AP-03 | Managed remote Python API | Optional; public browser inference already works | Define HTTPS/access/global quotas/logging/monitoring before exposing server-side inference. No paid endpoint or database is needed for the current app. |
+| AP-04 | Cloudflare mirror | Optional; existing collection requires account sign-in | Build/upload only a reviewed static model/runtime bundle with matching notices, verify it publicly, then advertise its actual URL. Current GitHub Pages URL is already public. |
+
+No booking, live Airbnb integration, current legal/zoning eligibility, causal
+pricing strategy, income guarantee or housing/lending decision use is claimed.
+See [model card](https://github.com/Sushant-Nemade/airbnb-price-workbench/blob/main/docs/MODEL_CARD.md)
+and [operations](https://github.com/Sushant-Nemade/airbnb-price-workbench/blob/main/docs/OPERATIONS.md).
+
 ## Cross-Project Owner Decisions
 
 | Decision | Why it is needed | Responsible role |
@@ -300,7 +346,7 @@ an appropriate secret manager, never in chat, committed source or this register.
 - Preserve upstream attribution and the applicable MIT/GPL/AGPL license notices.
 - Recheck audits before release; passing checks do not establish an uptime SLA or
   permanent security, privacy, factual-accuracy or domain-suitability guarantee.
-- Work on one new gallery candidate at a time. Nine other candidates remain planned,
+- Work on one new gallery candidate at a time. Eight other candidates remain planned,
   not implemented. Do not start another candidate without a later explicit request.
 
 ## Related Documents

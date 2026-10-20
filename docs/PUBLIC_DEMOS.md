@@ -1,6 +1,6 @@
 # Public Demo Hosting
 
-Reviewed: 2026-10-18. Cloudflare Pages project: `sushant-ai-demos`.
+Reviewed: 2026-10-20. Cloudflare Pages project: `sushant-ai-demos` (four pinned mirrors).
 
 Public directory: https://sushant-ai-demos.pages.dev/
 
@@ -10,12 +10,14 @@ Public directory: https://sushant-ai-demos.pages.dev/
 | GitPulse | https://sushant-ai-demos.pages.dev/gitpulse/ | https://sushant-nemade.github.io/gitpulse/ |
 | Market Insight | https://sushant-ai-demos.pages.dev/MarketInsight/ | https://sushant-nemade.github.io/MarketInsight/ |
 | TravelBrain | https://sushant-ai-demos.pages.dev/TravelBrain/ | https://sushant-nemade.github.io/TravelBrain/ |
+| Airbnb Price Workbench | https://sushant-nemade.github.io/airbnb-price-workbench/ | [Verified downloads](https://github.com/Sushant-Nemade/airbnb-price-workbench/releases/tag/v0.1.0-reference); no second hosted mirror |
 | Doclify | [CLI and source downloads](https://github.com/Sushant-Nemade/Doclify/releases/tag/v0.3.0-reference) | [Repository](https://github.com/Sushant-Nemade/Doclify) |
 
 ## Hosting Choice
 
-These public reference builds run on Cloudflare's static hosting, not a tunnel
-to a laptop. Local terminals can close and the computer can be switched off.
+The four earlier browser references run on Cloudflare's static hosting; the
+Airbnb model runs on GitHub Pages with actual browser-local ONNX inference.
+Neither delivery is a tunnel to a laptop. Local terminals can close and the computer can be switched off.
 The production hostname remains stable between deployments while the account
 and project remain active. No domain purchase, paid plan, cloud database, API
 key or public local-server ingress was required. Free-service terms and limits
@@ -34,6 +36,15 @@ portfolio link. Neither kind was installed or exposed here.
 - TravelBrain: a functional browser-local planner with illustrative budgets;
   private SQLite, live weather and Groq features still need the private server.
 - Doclify: an installable CLI, not an invented hosted upload-and-generate service.
+- Airbnb Price Workbench: an actual trained historical NYC2019 model, uncertainty,
+  browser-local CSV/scenarios and exports, not current rental quotes or bookings.
+
+The Airbnb GitHub Pages deployment was independently verified on desktop/mobile,
+including all30 authored sklearn parity scenarios, batch export, chart pixels,
+legal notices and private-path404 responses. The Cloudflare account required
+sign-in during this release; its existing four-project collection was not changed
+and no unverified fifth Cloudflare URL is advertised. Its manual bundle remains
+a reviewed snapshot, not automatic synchronization of every new project.
 
 Browser storage belongs to each host/origin; saved trips do not automatically
 migrate between Cloudflare, GitHub Pages and localhost. Export them when needed.

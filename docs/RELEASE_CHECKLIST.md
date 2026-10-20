@@ -131,6 +131,28 @@ optimization, multi-user service or production SLA is claimed.
 
 ## Next Candidate
 
-Nine catalog candidates remain. Select one in a later request and recheck its
+Eight catalog candidates remain. Select one in a later request and recheck its
 source, license, data rights and runnable path before implementation. Do not
 begin another candidate automatically or treat earlier ranking as verified feasibility.
+
+## Airbnb Price Workbench: Completed Reference (2026-10-20)
+
+The [original MIT project](https://github.com/Sushant-Nemade/airbnb-price-workbench)
+has a [verified public browser model](https://sushant-nemade.github.io/airbnb-price-workbench/).
+No unlicensed source/model/data was imported from the gallery reference. The
+separately reviewed NYC2019 dataset is checksum-pinned; real training/evaluation,
+host-disjoint partitions, historical uncertainty, browser/API numerical parity,
+installed artifacts, audits, cross-platform/container CI and data/training
+reproduction passed. Release downloads include source and a working UI/model wheel.
+
+1. Use the public browser app without credentials or a running maintainer PC.
+	Its self-hosted WASM runtime is approximately14 MB on first load.
+2. Inspect the model card, baselines, segment errors and broad uncertainty band.
+	The2019 filtered benchmark is not a current rental quote, booking or income guarantee.
+3. Use frozen setup plus fetch-data/train to reproduce training, then rebuild,
+	test and review any changed model/report before publishing. Raw listings and
+	identifiers are not included in the public app.
+4. Browser-local scenarios/CSV processing remain on that browser; saved inputs
+	are unencrypted and origin-specific. Server-side inference is optional separate scope.
+5. The existing Cloudflare collection was not modified without account sign-in.
+	Advertise the actual GitHub Pages URL, not an unverified Cloudflare mirror.

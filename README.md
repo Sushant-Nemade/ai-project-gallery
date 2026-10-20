@@ -9,7 +9,7 @@ Planned entries are links only: their code, data, model licenses and runtime sti
 
 ## Published Reference Implementations
 
-[Open the public demo directory](https://sushant-ai-demos.pages.dev/). Cloudflare Pages hosts these reference builds independently of any local computer; private APIs and model credentials are not exposed.
+Public reference links below use Cloudflare Pages or GitHub Pages and do not depend on a local computer. [Cloudflare collection](https://sushant-ai-demos.pages.dev/) contains four pinned mirrors; the Airbnb model has its own verified GitHub Pages deployment. Private APIs and credentials are not exposed.
 
 ### [AI Blog Publisher (BlogBoard)](https://github.com/Sushant-Nemade/ai-blog-publisher)
 
@@ -52,6 +52,14 @@ Verification: Attributed GPLv3 workbench for Paris/Lisbon/Kyoto; 27 Python tests
 [GitHub Pages fallback](https://sushant-nemade.github.io/TravelBrain/)
 [Download the reference CLI and source](https://github.com/Sushant-Nemade/TravelBrain/releases/tag/v0.2.1-reference)
 
+### [Airbnb Price Workbench (NYC 2019)](https://github.com/Sushant-Nemade/airbnb-price-workbench)
+
+Primary category: **Predictive Machine Learning**. Portfolio placement: **Interactive AI, computer vision and learning systems**.
+Concept reference: [https://github.com/KalyanM45/End-to-End-Airbnb-Price-Prediction](https://github.com/KalyanM45/End-to-End-Airbnb-Price-Prediction); source license: No license detected at pinned revision; no upstream code imported. No upstream code imported; original implementation license: MIT; specification revision: `2b6dc21406cfe0a24d303d1db12505403abed52e`.
+Verification: Original MIT implementation with separately licensed NYC2019 dataset; actual browser ONNX inference, 18 Python tests, 16 desktop/mobile browser cases, 30 authored cross-runtime probes, installed packages, Linux/Windows/container CI, audits and independent data/training reproduction passed. Host-disjoint test MAE48.80 USD versus52.66 borough/room baseline; historical interval coverage90.81%. Not a current quote or booking service; no upstream code/model/data imported.
+[Open public reference demo](https://sushant-nemade.github.io/airbnb-price-workbench/)
+[Download the reference CLI and source](https://github.com/Sushant-Nemade/airbnb-price-workbench/releases/tag/v0.1.0-reference)
+
 ## Categorized Backlog
 
 ### Generative and Agentic AI
@@ -67,7 +75,7 @@ Verification: Attributed GPLv3 workbench for Paris/Lisbon/Kyoto; 27 Python tests
 
 ### Predictive Machine Learning
 
-- [Airbnb Price Prediction](https://github.com/KalyanMurapaka45/End-to-End-Airbnb-Price-Prediction) - planned
+- [Airbnb Price Workbench (NYC 2019)](https://github.com/Sushant-Nemade/airbnb-price-workbench) - reference
 - [Boston House Price Prediction](https://github.com/KalyanMurapaka45/House-Price-Prediction) - planned
 - [Diamond Price Prediction](https://github.com/KalyanM45/Diamond-Price-Prediction) - planned
 - [Flight Fare Prediction](https://github.com/KalyanMurapaka45/Flight-Fare-Prediction) - planned
@@ -85,7 +93,7 @@ Verification: Attributed GPLv3 workbench for Paris/Lisbon/Kyoto; 27 Python tests
 
 ## Delivery Policy
 
-Active implementation: none. Next pending candidate: Airbnb Price Prediction, subject to fresh license and runnable-path audits.
+Active implementation: none. Next pending candidate: Boston House Price Prediction, subject to fresh license and runnable-path audits.
 No automatic daily imports or unattended publishing. Return in a later session to request the next project.
 Healthcare and financial examples remain educational until separately validated for any proposed real use.
 

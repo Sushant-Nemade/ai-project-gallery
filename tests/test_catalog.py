@@ -13,7 +13,12 @@ class CatalogTests(unittest.TestCase):
         validate(self.document)
         self.assertEqual(len(self.document["projects"]), 14)
         references = {project["id"] for project in self.document["projects"] if project["status"] == "reference"}
-        self.assertEqual(references, {"ai-blog-publisher", "gitpulse", "doclify", "market-insight", "travelbrain"})
+        self.assertEqual(references, {"ai-blog-publisher", "gitpulse", "doclify", "market-insight", "travelbrain", "airbnb-prices"})
+        airbnb = next(project for project in self.document["projects"] if project["id"] == "airbnb-prices")
+        self.assertEqual(airbnb["implementation"], "original")
+        self.assertFalse(airbnb["upstream_code_imported"])
+        self.assertIn("Not a current quote", airbnb["verification"])
+        self.assertIn("NYC2019", airbnb["verification"])
         travelbrain = next(project for project in self.document["projects"] if project["id"] == "travelbrain")
         self.assertEqual(travelbrain["license"], "GPL-3.0-only")
         self.assertIn("Groq inference remains unverified", travelbrain["verification"])
