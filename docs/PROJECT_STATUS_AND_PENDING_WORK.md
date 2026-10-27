@@ -1,15 +1,15 @@
 # Project Status and Pending Work Register
 
 **Portfolio owner:** Sushant Nemade  
-**Last updated:** 2026-10-20
+**Last updated:** 2026-10-27
 
-**Scope:** AI Blog Publisher, GitPulse, Doclify, Market Insight, TravelBrain, and Airbnb Price Workbench
+**Scope:** AI Blog Publisher, GitPulse, Doclify, Market Insight, TravelBrain, Airbnb Price Workbench, Boston Housing Research Workbench, and portfolio maintenance
 
 **Purpose:** Record remaining implementation, verification, deployment and owner decisions without overstating readiness.
 
 ## Executive Summary
 
-Six projects are published as tested reference implementations. Market Insight's
+Seven projects are published as tested reference implementations. Market Insight's
 implementation/release gates are complete; paid model inference and managed
 private hosting remain separate boundaries. Public synthetic browser references
 are available for Blog Publisher, GitPulse and Market Insight; Doclify is
@@ -20,6 +20,10 @@ booking or live-fare service.
 Airbnb Price Workbench adds an original MIT implementation with separately
 licensed NYC2019 data, host-disjoint evaluation and real browser ONNX predictions.
 Its historical benchmark is not a current-market price or revenue guarantee.
+Boston Housing adds a GPLv3 historical research adaptation with real browser
+ONNX inference. It estimates old tract medians, not individual/current houses;
+its nonstandard OpenML rights metadata and historic bias are explicitly retained
+as limitations rather than presented as commercial/fairness clearance.
 
 The first three projects retain their 2026-10-14 evidence snapshot. Market Insight
 was updated with its 2026-10-17 implementation and release evidence; TravelBrain
@@ -57,6 +61,7 @@ when the relevant code, dependency lock, configuration or infrastructure changes
 | [Market Insight](https://github.com/Sushant-Nemade/MarketInsight) | Published GPLv3 workbench and [synthetic reference](https://sushant-nemade.github.io/MarketInsight/) | 37 Python tests, 20 browser cases, installed-package checks, Linux/Windows CI and non-root container checks. Real Yahoo quote/history verified. | Paid AI inference, individual live financial endpoint availability and managed private hosting remain operator/provider boundaries. |
 | [TravelBrain](https://github.com/Sushant-Nemade/TravelBrain) | GPLv3 planning workbench and [illustrative reference](https://sushant-nemade.github.io/TravelBrain/) | 27 Python tests, 27 browser/server parity combinations, 14 browser cases, installed wheel/source checks, clear dependency audits and a real Open-Meteo forecast. | Groq inference, commercial weather arrangements and managed private hosting remain conditional. No live flight/hotel availability or booking is implemented. |
 | [Airbnb Price Workbench](https://github.com/Sushant-Nemade/airbnb-price-workbench) | Original MIT project and [actual browser model](https://sushant-nemade.github.io/airbnb-price-workbench/) | 18 Python tests, 16 browser cases, 30 authored sklearn/browser parity scenarios, real-data training reproduction, installed packages, Linux/Windows/container gates and audits pass. | NYC2019 filtered scope only; no temporal/current-market, revenue or individual-coverage guarantee. |
+| [Boston Housing Research Workbench](https://github.com/Sushant-Nemade/boston-housing-workbench) | GPLv3 adaptation and [actual browser model](https://sushant-nemade.github.io/boston-housing-workbench/) | 30 Python tests, 8 browser cases, 20 authored parity probes, independently reproduced training, clean installed wheel/source, Linux/Windows/container gates, audits and public desktop/mobile smoke pass. | Historical tract medians only; random split, capped targets, residual bias and nonstandard Public data-license label. Not for current housing decisions. |
 
 ### Public Access Update
 
@@ -74,7 +79,9 @@ paths were rejected. No local API or paid provider endpoint was exposed.
 See [public hosting and update/rollback runbook](PUBLIC_DEMOS.md) for selected
 source builds, artifact expiration, safety checks and manual production updates.
 This changes public-reference hosting, not any live-provider/private-hosting
-boundary recorded below. No paid services or unattended publishing were enabled.
+boundary recorded below. That hosting update did not enable paid services or
+unattended application publication. The separately activated reviewed-maintenance
+system is described below; it does not operate the optional live providers.
 
 Recorded audits found no known dependency vulnerabilities in the tested released
 dependency sets. Market Insight's formerly affected renderer chain was removed;
@@ -323,6 +330,90 @@ pricing strategy, income guarantee or housing/lending decision use is claimed.
 See [model card](https://github.com/Sushant-Nemade/airbnb-price-workbench/blob/main/docs/MODEL_CARD.md)
 and [operations](https://github.com/Sushant-Nemade/airbnb-price-workbench/blob/main/docs/OPERATIONS.md).
 
+## 7. Boston Housing Research Workbench
+
+### Completed Reference
+
+- Actual GPLv3 fork preserving history and upstream commit
+  `61515c0c4e70fca380728d8752048d38e48eeefa`; legacy pickle models are never loaded.
+- Pinned OpenML 531 version1 bytes, SHA-256 verified before parsing. No raw ARFF
+  or training rows are bundled; published parity scenarios are authored inputs.
+- Eleven strict named finite inputs, excluding B and LSTAT. Train323/calibration81/
+  test102; five-fold selection only within training. Historical test MAE $2,000.09
+  versus $5,882.35 training-median baseline, R-squared0.8518. Nominal90% historical
+  band coverage96.08%; this is not an individual/current-price guarantee.
+- Actual Python/browser ONNX inference with verified hashes, local saved scenarios,
+  bounded CSV batches, evidence/provenance views and safe exports.
+- Thirty Python tests and eight desktop/mobile browser cases, independent training,
+  audits, non-root container and clean installed wheel/source checks pass. TDD
+  regressions include unknown/excluded input rejection, unsafe model-entry removal
+  and the installed static-file ASGI disconnect lifecycle.
+- [Verified source/wheel release](https://github.com/Sushant-Nemade/boston-housing-workbench/releases/tag/v0.1.0-reference)
+  at source `c39186eda77b62b1439c7a63727ee2a36063ef3f`,
+  [CI40596443723](https://github.com/Sushant-Nemade/boston-housing-workbench/actions/runs/40596443723),
+  [Pages40596653640](https://github.com/Sushant-Nemade/boston-housing-workbench/actions/runs/40596653640)
+  and actual public desktop/mobile model smoke all pass.
+- Real local load report: 1,000 total synthetic journeys, 3,000 checked requests,
+  measured peak16 active, zero failed journeys; not 1,000 simultaneous humans or
+  browsers. P95~1.41s/P99~1.62s with tracing. Native ONNX memory is not measured by
+  Python traced-allocation figures. Hardware-specific evidence, not a capacity SLA.
+
+### Remaining Boundaries
+
+| ID | Boundary | Acceptance before stronger use |
+| --- | --- | --- |
+| BH-01 | Dataset rights | OpenML reports Public, a nonstandard label. No CC/OSI/commercial clearance is inferred. Obtain appropriate data-rights review before noneducational use. |
+| BH-02 | Historic bias and geographic dependence | Excluding B/LSTAT does not establish fairness. New representative data, geographic/temporal evaluation and domain/legal review are required before considering any real housing use. Current app explicitly forbids valuation/lending/allocation decisions. |
+| BH-03 | Target censoring and uncertainty | MEDV is top-coded at $50,000; estimates/bands are clipped to 5-50 thousand historic USD. Historical empirical coverage is not individual or shifted-distribution coverage. |
+| BH-04 | Optional hosted Python service | Browser inference is already public. A remote API needs HTTPS, edge rate limits, resource budgets and an operator; none is advertised as currently hosted. |
+
+## 8. Daily Reviewed Maintenance
+
+**Activated:** the seven released gallery projects have active
+`Daily Reviewed Maintenance` workflows at **12:00 noon Europe/Berlin**, pinned to
+controller `11586143dd21de383b969c5be09ae8808a5e3661`. A shared Berlin-date round robin
+selects one project per day; 2026-10-28 starts with Blog Publisher, followed by
+GitPulse, Doclify, Market Insight, TravelBrain, Airbnb and Boston. Starts are
+best-effort GitHub schedules, not exact-time or availability guarantees.
+
+Actual [TravelBrain pilot40596897772](https://github.com/Sushant-Nemade/TravelBrain/actions/runs/40596897772)
+passed 27/27 tests, 4/4 integration cases and 1,000/1,000 serial offline itinerary
+journeys, with zero observed failures/errors/skips. Real isolated model planning
+and author inference returned **no-safe-change**: no code improvement, PR, security
+remediation or deployment was invented. The [durable actual report](https://github.com/Sushant-Nemade/TravelBrain/blob/maintenance-reports/latest.json)
+records counts, source SHA, workload limits and model-response provenance.
+
+The system performs genuine baseline tests/integration, bounded local workloads,
+small approved-function proposals, behavioral RED-before-change, GREEN, separate
+review contexts and at most two repairs, then final regression/workload gates.
+A separate trusted publisher can open a reviewed PR and explicitly dispatch normal
+CI, while generated code runs without credentials or network. Global/per-project
+stop controls, date deduplication, pending-PR avoidance, durable sanitized reports
+and a 15:00 Berlin missing/blocked-evidence monitor are implemented.
+
+**Human merge remains required.** There is no self-approval or automatic production
+merge. Existing successful-owner-push Pages gates deploy the reviewed merge;
+Cloudflare snapshots remain manual, and Doclify release/PyPI publication is not
+automatically performed. The same small open-weight model in separate roles is
+not an independent pentester or expert-security substitute. No paid AI credential
+or inference endpoint is used; GitHub compute/storage policies still apply.
+
+Six workload profiles are serial repeated existing regression journeys with
+documented mocks/fixtures, not 1,000 concurrent users; Boston uses 1,000 total
+journeys with a maximum16-worker profile. Only TravelBrain's complete unattended
+path and Boston's separate real load run were exercised before activation; the
+other per-project adapters are configured for their selected days, not falsely
+reported as already live-tested. Existing project CI remains mandatory.
+
+The previous harness's fixed counts, claimed remediation dialogue and load numbers
+are explicitly labeled legacy fixtures, not operational evidence. Its old
+three-trigger 09:00 replay workflow is now manual-only.
+
+Operations, budgets, source/model pins, stop/recovery and actual activation evidence:
+[maintenance runbook](https://github.com/Sushant-Nemade/autonomous-quality-redteam-harness/blob/main/docs/MAINTENANCE_OPERATIONS.md).
+The [public evidence console](https://sushant-nemade.github.io/autonomous-quality-redteam-harness/)
+displays actual per-project reports; missing or blocked evidence is not a pass.
+
 ## Cross-Project Owner Decisions
 
 | Decision | Why it is needed | Responsible role |
@@ -346,7 +437,7 @@ an appropriate secret manager, never in chat, committed source or this register.
 - Preserve upstream attribution and the applicable MIT/GPL/AGPL license notices.
 - Recheck audits before release; passing checks do not establish an uptime SLA or
   permanent security, privacy, factual-accuracy or domain-suitability guarantee.
-- Work on one new gallery candidate at a time. Eight other candidates remain planned,
+- Work on one new gallery candidate at a time. Seven other candidates remain planned,
   not implemented. Do not start another candidate without a later explicit request.
 
 ## Related Documents
@@ -357,4 +448,6 @@ an appropriate secret manager, never in chat, committed source or this register.
 
 Update this register when implementation, configuration, verification or
 deployment status changes. Optional expansions remain uncommitted scope until
-explicitly selected; no future release dates or automatic daily execution are promised.
+explicitly selected. Reviewed maintenance is activated as described above; exact
+future start times, daily code improvements, release dates and production SLAs
+are not promised.

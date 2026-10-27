@@ -60,6 +60,14 @@ Verification: Original MIT implementation with separately licensed NYC2019 datas
 [Open public reference demo](https://sushant-nemade.github.io/airbnb-price-workbench/)
 [Download the reference CLI and source](https://github.com/Sushant-Nemade/airbnb-price-workbench/releases/tag/v0.1.0-reference)
 
+### [Boston Housing Historical Research Workbench](https://github.com/Sushant-Nemade/boston-housing-workbench)
+
+Primary category: **Predictive Machine Learning**. Portfolio placement: **Interactive AI, computer vision and learning systems**.
+Source: [https://github.com/KalyanM45/House-Price-Prediction](https://github.com/KalyanM45/House-Price-Prediction); license: GPL-3.0-only; upstream revision: `61515c0c4e70fca380728d8752048d38e48eeefa`.
+Verification: Attributed GPLv3 fork with source history preserved; 30 Python tests, 8 desktop/mobile browser cases, 20 authored parity probes, clean installed wheel/source checks, Linux/Windows/container CI, dependency audits, independent training reproduction and actual public browser inference passed. Historical tract-median MAE2000.09 USD versus5882.35 median baseline; random row split, not current/spatial valuation. B and LSTAT excluded, not a fairness guarantee. OpenML license label Public is nonstandard; no CC/commercial clearance asserted. Local 1000 total journeys at peak16, not1000 simultaneous users.
+[Open public reference demo](https://sushant-nemade.github.io/boston-housing-workbench/)
+[Download the reference CLI and source](https://github.com/Sushant-Nemade/boston-housing-workbench/releases/tag/v0.1.0-reference)
+
 ## Categorized Backlog
 
 ### Generative and Agentic AI
@@ -76,7 +84,7 @@ Verification: Original MIT implementation with separately licensed NYC2019 datas
 ### Predictive Machine Learning
 
 - [Airbnb Price Workbench (NYC 2019)](https://github.com/Sushant-Nemade/airbnb-price-workbench) - reference
-- [Boston House Price Prediction](https://github.com/KalyanMurapaka45/House-Price-Prediction) - planned
+- [Boston Housing Historical Research Workbench](https://github.com/Sushant-Nemade/boston-housing-workbench) - reference
 - [Diamond Price Prediction](https://github.com/KalyanM45/Diamond-Price-Prediction) - planned
 - [Flight Fare Prediction](https://github.com/KalyanMurapaka45/Flight-Fare-Prediction) - planned
 - [Heart Disease Prediction](https://github.com/KalyanMurapaka45/Heart-Disease-Prediction) - planned
@@ -93,7 +101,7 @@ Verification: Original MIT implementation with separately licensed NYC2019 datas
 
 ## Delivery Policy
 
-Active implementation: none. Next pending candidate: Boston House Price Prediction, subject to fresh license and runnable-path audits.
+Active implementation: none. Next pending candidate: Diamond Price Prediction, subject to fresh license and runnable-path audits.
 No automatic daily imports or unattended publishing. Return in a later session to request the next project.
 Healthcare and financial examples remain educational until separately validated for any proposed real use.
 

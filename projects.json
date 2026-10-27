@@ -80,7 +80,17 @@
       "demo": "https://sushant-nemade.github.io/airbnb-price-workbench/",
       "release": "https://github.com/Sushant-Nemade/airbnb-price-workbench/releases/tag/v0.1.0-reference"
     },
-    {"id": "boston-housing", "name": "Boston House Price Prediction", "category": "predictive-machine-learning", "source": "https://github.com/KalyanMurapaka45/House-Price-Prediction", "status": "planned"},
+    {
+      "id": "boston-housing", "name": "Boston Housing Historical Research Workbench",
+      "category": "predictive-machine-learning", "portfolio_category": "Interactive AI, computer vision and learning systems",
+      "source": "https://github.com/KalyanM45/House-Price-Prediction",
+      "source_commit": "61515c0c4e70fca380728d8752048d38e48eeefa", "license": "GPL-3.0-only",
+      "repository": "https://github.com/Sushant-Nemade/boston-housing-workbench", "status": "reference",
+      "tags": ["Python", "scikit-learn", "ONNX", "TypeScript", "historical-research", "model-evaluation"],
+      "verification": "Attributed GPLv3 fork with source history preserved; 30 Python tests, 8 desktop/mobile browser cases, 20 authored parity probes, clean installed wheel/source checks, Linux/Windows/container CI, dependency audits, independent training reproduction and actual public browser inference passed. Historical tract-median MAE2000.09 USD versus5882.35 median baseline; random row split, not current/spatial valuation. B and LSTAT excluded, not a fairness guarantee. OpenML license label Public is nonstandard; no CC/commercial clearance asserted. Local 1000 total journeys at peak16, not1000 simultaneous users.",
+      "demo": "https://sushant-nemade.github.io/boston-housing-workbench/",
+      "release": "https://github.com/Sushant-Nemade/boston-housing-workbench/releases/tag/v0.1.0-reference"
+    },
     {"id": "diamond-prices", "name": "Diamond Price Prediction", "category": "predictive-machine-learning", "source": "https://github.com/KalyanM45/Diamond-Price-Prediction", "status": "planned"},
     {"id": "flight-fares", "name": "Flight Fare Prediction", "category": "predictive-machine-learning", "source": "https://github.com/KalyanMurapaka45/Flight-Fare-Prediction", "status": "planned"},
     {"id": "heart-disease", "name": "Heart Disease Prediction", "category": "predictive-machine-learning", "source": "https://github.com/KalyanMurapaka45/Heart-Disease-Prediction", "status": "planned"},
