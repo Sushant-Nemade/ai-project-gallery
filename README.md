@@ -66,7 +66,7 @@ Primary category: **Predictive Machine Learning**. Portfolio placement: **Intera
 Source: [https://github.com/KalyanM45/House-Price-Prediction](https://github.com/KalyanM45/House-Price-Prediction); license: GPL-3.0-only; upstream revision: `61515c0c4e70fca380728d8752048d38e48eeefa`.
 Verification: Attributed GPLv3 fork with source history preserved; 30 Python tests, 8 desktop/mobile browser cases, 20 authored parity probes, clean installed wheel/source checks, Linux/Windows/container CI, dependency audits, independent training reproduction and actual public browser inference passed. Historical tract-median MAE2000.09 USD versus5882.35 median baseline; random row split, not current/spatial valuation. B and LSTAT excluded, not a fairness guarantee. OpenML license label Public is nonstandard; no CC/commercial clearance asserted. Local 1000 total journeys at peak16, not1000 simultaneous users.
 [Open public reference demo](https://sushant-nemade.github.io/boston-housing-workbench/)
-[Download the reference CLI and source](https://github.com/Sushant-Nemade/boston-housing-workbench/releases/tag/v0.1.0-reference)
+[Download the reference CLI and source](https://github.com/Sushant-Nemade/boston-housing-workbench/releases/tag/v0.1.1-reference)
 
 ## Categorized Backlog
 

@@ -348,10 +348,10 @@ and [operations](https://github.com/Sushant-Nemade/airbnb-price-workbench/blob/m
   audits, non-root container and clean installed wheel/source checks pass. TDD
   regressions include unknown/excluded input rejection, unsafe model-entry removal
   and the installed static-file ASGI disconnect lifecycle.
-- [Verified source/wheel release](https://github.com/Sushant-Nemade/boston-housing-workbench/releases/tag/v0.1.0-reference)
-  at source `c39186eda77b62b1439c7a63727ee2a36063ef3f`,
-  [CI40596443723](https://github.com/Sushant-Nemade/boston-housing-workbench/actions/runs/40596443723),
-  [Pages40596653640](https://github.com/Sushant-Nemade/boston-housing-workbench/actions/runs/40596653640)
+- [Verified source/wheel release](https://github.com/Sushant-Nemade/boston-housing-workbench/releases/tag/v0.1.1-reference)
+  at source `b5a9c0e04f7ad449f207964a4cf77c7a218b217b`,
+  [CI40602904407](https://github.com/Sushant-Nemade/boston-housing-workbench/actions/runs/40602904407),
+  [Pages40603092891](https://github.com/Sushant-Nemade/boston-housing-workbench/actions/runs/40603092891)
   and actual public desktop/mobile model smoke all pass.
 - Real local load report: 1,000 total synthetic journeys, 3,000 checked requests,
   measured peak16 active, zero failed journeys; not 1,000 simultaneous humans or
@@ -371,7 +371,7 @@ and [operations](https://github.com/Sushant-Nemade/airbnb-price-workbench/blob/m
 
 **Activated:** the seven released gallery projects have active
 `Daily Reviewed Maintenance` workflows at **12:00 noon Europe/Berlin**, pinned to
-controller `11586143dd21de383b969c5be09ae8808a5e3661`. A shared Berlin-date round robin
+controller `dbe13f429cb7867d386d10f499e394a2d1d89948`. A shared Berlin-date round robin
 selects one project per day; 2026-10-28 starts with Blog Publisher, followed by
 GitPulse, Doclify, Market Insight, TravelBrain, Airbnb and Boston. Starts are
 best-effort GitHub schedules, not exact-time or availability guarantees.
@@ -382,6 +382,11 @@ journeys, with zero observed failures/errors/skips. Real isolated model planning
 and author inference returned **no-safe-change**: no code improvement, PR, security
 remediation or deployment was invented. The [durable actual report](https://github.com/Sushant-Nemade/TravelBrain/blob/maintenance-reports/latest.json)
 records counts, source SHA, workload limits and model-response provenance.
+
+The security-fixed toolchain was also exercised by
+[pilot40602640097](https://github.com/Sushant-Nemade/TravelBrain/actions/runs/40602640097):
+27 tests, four integration cases, 1,000 serial journeys and real inference again
+completed with no-safe-change. No PR/improvement was manufactured.
 
 The system performs genuine baseline tests/integration, bounded local workloads,
 small approved-function proposals, behavioral RED-before-change, GREEN, separate
@@ -413,6 +418,24 @@ Operations, budgets, source/model pins, stop/recovery and actual activation evid
 [maintenance runbook](https://github.com/Sushant-Nemade/autonomous-quality-redteam-harness/blob/main/docs/MAINTENANCE_OPERATIONS.md).
 The [public evidence console](https://sushant-nemade.github.io/autonomous-quality-redteam-harness/)
 displays actual per-project reports; missing or blocked evidence is not a pass.
+
+### Security Maintenance At Activation
+
+Existing ordinary CI exposed newer advisory data after the earlier reference
+snapshots. Only affected certifi/filelock/opentelemetry-api locks were refreshed;
+DOMPurify3.4.17 and Zod4.6.7 replaced the affected frontend versions. CI/container
+tools now use fixed uv0.13.4. No audit suppression or release-gate bypass was added.
+Doclify retains Python3.10: a verified compatible pre-affected filelock3.20.3 is
+constrained only there; newer Python uses the patched current release. Its actual
+Python3.10 audit and 39 tests passed, with one Windows symlink-permission skip.
+Other affected projects' existing local suites and known-vulnerability audits passed.
+
+Airbnb retraining also exposed CPU-kernel drift: Linux MAE49.51 versus reference48.80.
+Pinning its reproduction job to the verified reference Haswell BLAS kernel restored
+the unchanged tolerance without changing saved weights, dataset, splits or metrics.
+Controlled local reproduction exactly matched the recorded MAE, and
+[Linux/Windows/container/reproduction CI40603723402](https://github.com/Sushant-Nemade/airbnb-price-workbench/actions/runs/40603723402)
+passed. The published historical model was not replaced.
 
 ## Cross-Project Owner Decisions
 
