@@ -1,22 +1,27 @@
 # Public Demo Hosting
 
-Reviewed: 2026-10-20. Cloudflare Pages project: `sushant-ai-demos` (four pinned mirrors).
+Reviewed: 2026-10-27. Current security-patched primary builds use GitHub Pages.
+Cloudflare project `sushant-ai-demos` contains four older manually pinned mirrors.
 
-Public directory: https://sushant-ai-demos.pages.dev/
+**Do not treat the Cloudflare snapshots as current security builds.** They were
+not republished with the latest dependency repairs because deployment authentication
+was unavailable. Primary catalog/profile/portfolio links now select verified current
+GitHub Pages builds instead. Historical directory: https://sushant-ai-demos.pages.dev/
 
-| Project | Primary public URL | Independent fallback |
+| Project | Current primary public URL | Historical snapshot or downloads |
 | --- | --- | --- |
-| AI Blog Publisher | https://sushant-ai-demos.pages.dev/ai-blog-publisher/ | https://sushant-nemade.github.io/ai-blog-publisher/ |
-| GitPulse | https://sushant-ai-demos.pages.dev/gitpulse/ | https://sushant-nemade.github.io/gitpulse/ |
-| Market Insight | https://sushant-ai-demos.pages.dev/MarketInsight/ | https://sushant-nemade.github.io/MarketInsight/ |
-| TravelBrain | https://sushant-ai-demos.pages.dev/TravelBrain/ | https://sushant-nemade.github.io/TravelBrain/ |
+| AI Blog Publisher | https://sushant-nemade.github.io/ai-blog-publisher/ | Older mirror: https://sushant-ai-demos.pages.dev/ai-blog-publisher/ |
+| GitPulse | https://sushant-nemade.github.io/gitpulse/ | Older mirror: https://sushant-ai-demos.pages.dev/gitpulse/ |
+| Market Insight | https://sushant-nemade.github.io/MarketInsight/ | Older mirror: https://sushant-ai-demos.pages.dev/MarketInsight/ |
+| TravelBrain | https://sushant-nemade.github.io/TravelBrain/ | Older mirror: https://sushant-ai-demos.pages.dev/TravelBrain/ |
 | Airbnb Price Workbench | https://sushant-nemade.github.io/airbnb-price-workbench/ | [Verified downloads](https://github.com/Sushant-Nemade/airbnb-price-workbench/releases/tag/v0.1.0-reference); no second hosted mirror |
+| Boston Housing Research Workbench | https://sushant-nemade.github.io/boston-housing-workbench/ | [Verified downloads](https://github.com/Sushant-Nemade/boston-housing-workbench/releases/tag/v0.1.1-reference); historical research only |
 | Doclify | [CLI and source downloads](https://github.com/Sushant-Nemade/Doclify/releases/tag/v0.3.0-reference) | [Repository](https://github.com/Sushant-Nemade/Doclify) |
 
 ## Hosting Choice
 
-The four earlier browser references run on Cloudflare's static hosting; the
-Airbnb model runs on GitHub Pages with actual browser-local ONNX inference.
+The current browser references run on GitHub Pages, with actual browser-local
+ONNX inference for Airbnb and Boston. Four earlier snapshots remain on Cloudflare.
 Neither delivery is a tunnel to a laptop. Local terminals can close and the computer can be switched off.
 The production hostname remains stable between deployments while the account
 and project remain active. No domain purchase, paid plan, cloud database, API
@@ -38,6 +43,13 @@ portfolio link. Neither kind was installed or exposed here.
 - Doclify: an installable CLI, not an invented hosted upload-and-generate service.
 - Airbnb Price Workbench: an actual trained historical NYC2019 model, uncertainty,
   browser-local CSV/scenarios and exports, not current rental quotes or bookings.
+- Boston Housing Research Workbench: an actual historical tract-median model,
+  not individual/current housing valuation or lending/allocation decisions.
+
+All four newly primary GitHub Pages URLs returned HTTP200 after current successful
+CI/deployments. The actual hosted Blog Publisher sanitizer reports DOMPurify3.4.17.
+Boston's public desktop/mobile model/photo/chart and layout checks passed. The
+maintenance evidence console and portfolio were independently checked on desktop/mobile.
 
 The Airbnb GitHub Pages deployment was independently verified on desktop/mobile,
 including all30 authored sklearn parity scenarios, batch export, chart pixels,
@@ -53,6 +65,10 @@ and local API ports are not published. HTTPS and basic response headers are set;
 hosting alone does not establish factual accuracy or production certification.
 
 ## Reproduce the Bundle
+
+This command reproduces the builder's **historical pinned selection**, not the
+latest security-patched sources. Review and update every `DEMO_BUILDS` pin first
+before using its output for any new deployment. Do not blindly redeploy old artifacts.
 
 From this repository, using Python 3.13+ and an authenticated GitHub CLI account
 with access to the public repositories' Actions artifacts:

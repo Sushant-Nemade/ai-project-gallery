@@ -65,10 +65,12 @@ when the relevant code, dependency lock, configuration or infrastructure changes
 
 ### Public Access Update
 
-The four web references are now also deployed on Cloudflare Pages, independently
-of local computers or tunnels: [public demo directory](https://sushant-ai-demos.pages.dev/).
-The catalog's primary URLs point there; the GitHub Pages URLs above remain
-independent fallbacks. Doclify remains a downloadable CLI, not a hosted service.
+The four earlier web references also have historical snapshots on Cloudflare Pages,
+independently of local computers or tunnels. Those manually pinned mirrors were
+not refreshed during this security update. The catalog/profile/site primary URLs
+now point to the current verified GitHub Pages builds above; the actual hosted
+Blog Publisher sanitizer is patched DOMPurify3.4.17. Cloudflare is not advertised
+as a current security-patched fallback. Doclify remains a downloadable CLI.
 Airbnb Price Workbench is separately hosted on GitHub Pages. Its public model
 works without a local computer or Python server; the existing Cloudflare
 collection was not changed because account sign-in was unavailable this session.

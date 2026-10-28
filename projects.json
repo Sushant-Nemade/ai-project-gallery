@@ -18,8 +18,7 @@
       "source_commit": "8b743e21ac0e940dc8bd159f5d94a8f5eb17c630", "license": "MIT",
       "repository": "https://github.com/Sushant-Nemade/ai-blog-publisher",
       "status": "reference", "verification": "Offline workflow, Linux/Windows CI and hosted browser checks passed; live AI/search/R2 integrations unverified.",
-      "demo": "https://sushant-ai-demos.pages.dev/ai-blog-publisher/",
-      "demo_fallback": "https://sushant-nemade.github.io/ai-blog-publisher/"
+      "demo": "https://sushant-nemade.github.io/ai-blog-publisher/"
     },
     {
       "id": "gitpulse", "name": "GitPulse: Audience Workspace", "category": "data-developer-tools",
@@ -29,8 +28,7 @@
       "implementation": "original", "upstream_code_imported": false, "source_license": "unverified MIT claim",
       "license": "MIT", "repository": "https://github.com/Sushant-Nemade/gitpulse", "status": "reference",
       "verification": "Original code; strict typing, security audits, desktop/mobile tests, Linux/Windows CI, hosted fictional demo and one public GitHub REST sync verified. Hosted private API remains unverified.",
-      "demo": "https://sushant-ai-demos.pages.dev/gitpulse/",
-      "demo_fallback": "https://sushant-nemade.github.io/gitpulse/"
+      "demo": "https://sushant-nemade.github.io/gitpulse/"
     },
     {
       "id": "doclify", "name": "Doclify", "category": "data-developer-tools",
@@ -51,8 +49,7 @@
       "repository": "https://github.com/Sushant-Nemade/MarketInsight", "status": "reference",
       "tags": ["Python", "FastAPI", "React", "financial-research", "provenance"],
       "verification": "Attributed GPLv3 workbench; 37 Python tests, 20 desktop/mobile browser cases, installed source/wheel checks, Linux/Windows CI, non-root container and dependency audits passed. Real Yahoo Finance quote/history verified with TLS enabled. Paid AI inference remains unverified; public preview is fictional data.",
-      "demo": "https://sushant-ai-demos.pages.dev/MarketInsight/",
-      "demo_fallback": "https://sushant-nemade.github.io/MarketInsight/",
+      "demo": "https://sushant-nemade.github.io/MarketInsight/",
       "release": "https://github.com/Sushant-Nemade/MarketInsight/releases/tag/v0.2.0-reference"
     },
     {
@@ -63,8 +60,7 @@
       "repository": "https://github.com/Sushant-Nemade/TravelBrain", "status": "reference",
       "tags": ["Python", "FastAPI", "travel-planning", "provenance", "SQLite"],
       "verification": "Attributed GPLv3 workbench for Paris/Lisbon/Kyoto; 27 Python tests including 27 browser/server parity combinations, 14 desktop/mobile browser cases, installed wheel/source checks and audits passed. Live Open-Meteo forecast verified with TLS. Groq inference remains unverified; costs are illustrative, not live fares or bookings.",
-      "demo": "https://sushant-ai-demos.pages.dev/TravelBrain/",
-      "demo_fallback": "https://sushant-nemade.github.io/TravelBrain/",
+      "demo": "https://sushant-nemade.github.io/TravelBrain/",
       "release": "https://github.com/Sushant-Nemade/TravelBrain/releases/tag/v0.2.1-reference"
     },
     {
