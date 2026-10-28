@@ -373,7 +373,7 @@ and [operations](https://github.com/Sushant-Nemade/airbnb-price-workbench/blob/m
 
 **Activated:** the seven released gallery projects have active
 `Daily Reviewed Maintenance` workflows at **12:00 noon Europe/Berlin**, pinned to
-controller `fab15f511967b52f886285322a82547db1df881a`. A shared Berlin-date round robin
+controller `321a857ef17570906f01bf61164d0b8e59147ecc`. A shared Berlin-date round robin
 selects one project per day; 2026-10-28 starts with Blog Publisher, followed by
 GitPulse, Doclify, Market Insight, TravelBrain, Airbnb and Boston. Starts are
 best-effort GitHub schedules, not exact-time or availability guarantees.
