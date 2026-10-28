@@ -373,7 +373,7 @@ and [operations](https://github.com/Sushant-Nemade/airbnb-price-workbench/blob/m
 
 **Activated:** the seven released gallery projects have active
 `Daily Reviewed Maintenance` workflows at **12:00 noon Europe/Berlin**, pinned to
-controller `dbe13f429cb7867d386d10f499e394a2d1d89948`. A shared Berlin-date round robin
+controller `fab15f511967b52f886285322a82547db1df881a`. A shared Berlin-date round robin
 selects one project per day; 2026-10-28 starts with Blog Publisher, followed by
 GitPulse, Doclify, Market Insight, TravelBrain, Airbnb and Boston. Starts are
 best-effort GitHub schedules, not exact-time or availability guarantees.
@@ -398,8 +398,17 @@ CI, while generated code runs without credentials or network. Global/per-project
 stop controls, date deduplication, pending-PR avoidance, durable sanitized reports
 and a 15:00 Berlin missing/blocked-evidence monitor are implemented.
 
-**Human merge remains required.** There is no self-approval or automatic production
-merge. Existing successful-owner-push Pages gates deploy the reviewed merge;
+**The owner authorized guarded unattended delivery on 2026-10-28.** Every project
+requires its exact existing CI jobs on protected main, strict base freshness,
+administrator enforcement, PR-only/linear history and no force pushes/deletions.
+A separate trusted exact-SHA guard can merge only the approved bounded bot candidate
+after matching real RED/GREEN/review evidence and complete independent CI. Routine
+manual approval/start is not required. The merged main SHA receives another full CI
+run; only successful current-main push/dispatch verification can deploy. Delivery
+events and a six-hour bounded reconciliation handle missed events and limited retries.
+No self-review or bypass of checks is permitted. Safety/platform failures stop
+promotion rather than being silently accepted.
+
 Cloudflare snapshots remain manual, and Doclify release/PyPI publication is not
 automatically performed. The same small open-weight model in separate roles is
 not an independent pentester or expert-security substitute. No paid AI credential
