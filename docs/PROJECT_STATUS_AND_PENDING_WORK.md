@@ -1,7 +1,7 @@
 # Project Status and Pending Work Register
 
 **Portfolio owner:** Sushant Nemade  
-**Last updated:** 2026-10-27
+**Last updated:** 2026-10-28
 
 **Scope:** AI Blog Publisher, GitPulse, Doclify, Market Insight, TravelBrain, Airbnb Price Workbench, Boston Housing Research Workbench, and portfolio maintenance
 
@@ -373,10 +373,10 @@ and [operations](https://github.com/Sushant-Nemade/airbnb-price-workbench/blob/m
 
 **Activated:** the seven released gallery projects have active
 `Daily Reviewed Maintenance` workflows at **12:00 noon Europe/Berlin**, pinned to
-controller `321a857ef17570906f01bf61164d0b8e59147ecc`, with TravelBrain on
-`5fc31e5684790f0bc7d7ba1417c1c2f2353d0880` for its executed-RED repair contract and
-separately pinned larger offline reviewer.
-Both use the same seven-project registry and guarded delivery policy. A shared Berlin-date round robin
+controller `e205849fa00bfcafb83b1bc645ae26e9ca378b47`, including immutable executed-RED
+repair evidence, a separately pinned larger reviewer and explicit proof-gated
+deployment recovery. All callers use the same seven-project registry and guarded
+delivery policy. A shared Berlin-date round robin
 selects one project per day; 2026-10-28 starts with Blog Publisher, followed by
 GitPulse, Doclify, Market Insight, TravelBrain, Airbnb and Boston. Starts are
 best-effort GitHub schedules, not exact-time or availability guarantees.
@@ -392,6 +392,28 @@ The security-fixed toolchain was also exercised by
 [pilot40602640097](https://github.com/Sushant-Nemade/TravelBrain/actions/runs/40602640097):
 27 tests, four integration cases, 1,000 serial journeys and real inference again
 completed with no-safe-change. No PR/improvement was manufactured.
+
+The later [real repair pilot40621360289](https://github.com/Sushant-Nemade/TravelBrain/actions/runs/40621360289)
+demonstrated an actual negative-budget regression, GREEN 2/2, final 29/29 tests,
+4/4 integration cases and 1,000 serial journeys both before and after the change
+with zero failures. A separately pinned 7B reviewer approved it.
+[Bot PR5](https://github.com/Sushant-Nemade/TravelBrain/pull/5) passed complete
+independent CI and was merged by
+[trusted reconciliation40623354813](https://github.com/Sushant-Nemade/TravelBrain/actions/runs/40623354813),
+not a routine human merge, producing `c79ed99baa98235fa0717b803a1c32feb93228cc`.
+[Full post-merge CI40623391622](https://github.com/Sushant-Nemade/TravelBrain/actions/runs/40623391622)
+passed. The suppressed Pages callback was then fixed with explicit verified-run
+promotion; the [versioned delivery report](https://github.com/Sushant-Nemade/TravelBrain/blob/maintenance-reports/runs/maintenance-2026-10-28-pilot-40621360289.json)
+preserves the original merge and separately verified current deployment revision.
+Controller [CI40660929643](https://github.com/Sushant-Nemade/autonomous-quality-redteam-harness/actions/runs/40660929643)
+passed 69 tests on all three Python/OS jobs plus the existing security/package gates.
+The final protected workflow-only main `a5c793ca3e912dbeb8405edfdfaef78017ead0ee`
+retains the agent merge and passed
+[main CI40662028220](https://github.com/Sushant-Nemade/TravelBrain/actions/runs/40662028220)
+and [proof-gated Pages40662530170](https://github.com/Sushant-Nemade/TravelBrain/actions/runs/40662530170).
+[Trusted housekeeping40662759511](https://github.com/Sushant-Nemade/TravelBrain/actions/runs/40662759511)
+then recorded **deployed**, checking the successful deployment job rather than
+assuming a green CI run meant publication.
 
 The system performs genuine baseline tests/integration, bounded local workloads,
 small approved-function proposals, behavioral RED-before-change, GREEN, separate
@@ -409,12 +431,17 @@ after matching real RED/GREEN/review evidence and complete independent CI. Routi
 manual approval/start is not required. The merged main SHA receives another full CI
 run; only successful current-main push/dispatch verification can deploy. Delivery
 events and a six-hour bounded reconciliation handle missed events and limited retries.
+Six Pages workflows accept an explicit successful-main CI run ID. A separate
+read-only guard validates owner, workflow, event, exact current SHA and the complete
+successful job set before checkout. Main is checked again just before deployment.
+Missing Pages callbacks receive at most two dispatch attempts; failed deployment
+receives one retry. A skipped deployment is never reported as delivered.
 No self-review or bypass of checks is permitted. Safety/platform failures stop
 promotion rather than being silently accepted.
 
 Cloudflare snapshots remain manual, and Doclify release/PyPI publication is not
-automatically performed. The same small open-weight model in separate roles is
-not an independent pentester or expert-security substitute. No paid AI credential
+automatically performed. Automated open-weight model review is not an independent
+human pentest or expert-security substitute. No paid AI credential
 or inference endpoint is used; GitHub compute/storage policies still apply.
 
 Six workload profiles are serial repeated existing regression journeys with
